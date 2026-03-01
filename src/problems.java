@@ -1,5 +1,6 @@
 
 public class problems {
+    // Check number is prime or not------------->
     public static void primeNum(int num) {
 
         boolean primeNum=true;
@@ -19,6 +20,8 @@ public class problems {
             System.out.print("Not Prime");
         }
     }
+
+    // convert array into 2D array than tranpose that array
 
     public static void conArr() {
         int num[] = {0,1, 2, 3, 4, 5, 6, 7, 8, 9};
@@ -53,8 +56,57 @@ public class problems {
             System.out.println();
             }
     }
+
+    //Fist non-repeateing character(Brute force)-------------------->
+    public static char nonRepeateChar1(String s) {
+
+        for(int i = 0; i < s.length(); i++) {
+            char x = s.charAt(i);
+            boolean isUnique = true;
+
+            // Check left side
+            for(int j = 0; j < i; j++) {
+                if(x == s.charAt(j)) {
+                    isUnique = false;
+                    break;
+                }
+            }
+
+            // Check right side only if still unique
+            for(int j = i + 1; j < s.length() && isUnique; j++) {
+                if(x == s.charAt(j)) {
+                    isUnique = false;
+                    break;
+                }
+            }
+
+            if(isUnique) {
+                return x;
+            }
+        }
+
+        return '_';
+    }
+    //Fist non-repeateing character(Optimize way)-------------------->
+    public static char nonRepeateChar2(String s) {
+
+        int[] freq = new int[256];
+
+        for(int i = 0; i < s.length(); i++) {
+            freq[s.charAt(i)]++;
+        }
+
+        for(int i = 0; i < s.length(); i++) {
+            if(freq[s.charAt(i)] == 1) {
+                return s.charAt(i);
+            }
+        }
+        return '_';
+    }
+    /*char ans =  nonRepeateChar("aaccdebe");
+       System.out.print(ans);*/
     public static void main(String[] args) {
-        conArr();
+
 
     }
 
