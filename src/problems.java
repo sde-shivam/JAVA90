@@ -57,7 +57,7 @@ public class problems {
             }
     }
 
-    //Fist non-repeateing character(Brute force)-------------------->
+    //First non-repeateing character(Brute force)-------------------->
     public static char nonRepeateChar1(String s) {
 
         for(int i = 0; i < s.length(); i++) {
@@ -87,7 +87,7 @@ public class problems {
 
         return '_';
     }
-    //Fist non-repeateing character(Optimize way)-------------------->
+    //First non-repeateing character(Optimize way)-------------------->
     public static char nonRepeateChar2(String s) {
 
         int[] freq = new int[256];
@@ -105,6 +105,22 @@ public class problems {
     }
     /*char ans =  nonRepeateChar("aaccdebe");
        System.out.print(ans);*/
+    //find Second Largest Element----------------->
+    public static Integer findSecondLargest(int[] arr) {
+        int largest = Integer.MIN_VALUE;
+        int secondLargest = Integer.MIN_VALUE;
+
+        for (int num : arr) {
+            if (num > largest) {
+                secondLargest = largest;
+                largest = num;
+            }
+            else if (num < largest && num > secondLargest) {
+                secondLargest = num;
+            }
+        }
+        return secondLargest;
+    }
     public static void main(String[] args) {
 
 
