@@ -179,6 +179,7 @@ public class problems {
 
     }
     /*reverse("shivam");*/
+
     // Count Vowels ----------------------->
     public static void countVowels(String s) {
         int count = 0;
@@ -190,6 +191,19 @@ public class problems {
             }
         }
         System.out.println(count);
+    }
+    // Find Largest number in array-------------------->
+    public static int findLargest(int[] arr) {
+
+        int max = arr[0];
+
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+
+        return max;
     }
     public static void main(String[] args) {
 
