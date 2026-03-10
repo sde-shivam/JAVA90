@@ -214,6 +214,20 @@ public class problems {
         }
         return true;
     }
+
+    //Swap Two Numbers (Without Using Third Variable)----------->
+    public static void swapNumbers(int a, int b) {
+
+        a = a + b;
+        b = a - b;
+        a = a - b;
+
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+    }
+        /* int temp = a;
+            a = b;
+            b = temp; */
     public static void main(String[] args) {
 
 
