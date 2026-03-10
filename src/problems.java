@@ -228,6 +228,18 @@ public class problems {
         /* int temp = a;
             a = b;
             b = temp; */
+
+        //Count Number of Words in a String
+        public static void countWords(String s) {
+            int count = 0;
+            for (int i = 0; i < s.length(); i++) {
+                char ch = s.charAt(i);
+                if (ch != ' ' && (i == 0 || s.charAt(i - 1) == ' ')) {
+                    count++;
+                }
+            }
+            System.out.println(count);
+        }
     public static void main(String[] args) {
 
 
