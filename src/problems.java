@@ -276,8 +276,22 @@ public class problems {
         System.out.println("Even = " + even);
         System.out.println("Odd = " + odd);
     }
+    public static void starPrint(int n){
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+    public static void eachEl(int num[]){
+       for(int el :num){
+           System.out.print(el+",");
+       }
+    }
     public static void main(String[] args) {
-
+        int num[]={12,23,348,48,56,68};
+        eachEl(num);
     }
 }
 
