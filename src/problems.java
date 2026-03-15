@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 public class problems {
     // Check number is prime or not------------->
     public static void primeNum(int num) {
@@ -294,9 +294,18 @@ public class problems {
             System.out.print(num[i]+",");
         }
     }
+    public static void employee(){
+        Scanner scn = new Scanner(System.in);
+        System.out.print("Enter the name: ");
+        String name = scn.nextLine();
+        System.out.print("Enter the ID: ");
+        int id = scn.nextInt();
+        System.out.print("Enter the gender(M/F): ");
+        char gender = scn.next().charAt(0);
+        System.out.print("id: "+id+" name: "+name+" gender: "+gender);
+    }
     public static void main(String[] args) {
-        int num[]={12,23,348,48,56,68};
-        check(num);
+        employee();
     }
 }
 
