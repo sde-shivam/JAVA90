@@ -289,9 +289,14 @@ public class problems {
            System.out.print(el+",");
        }
     }
+    public static void check(int num[]){
+        for(int i=num.length-1;i>=1;i--){
+            System.out.print(num[i]+",");
+        }
+    }
     public static void main(String[] args) {
         int num[]={12,23,348,48,56,68};
-        eachEl(num);
+        check(num);
     }
 }
 
