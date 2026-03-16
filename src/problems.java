@@ -318,7 +318,7 @@ public class problems {
     }
     //consonant and vowel ----------------->
     public static void checkDigit(){
-       { Scanner scn = new Scanner(System.in);
+        Scanner scn = new Scanner(System.in);
         System.out.print("Enter the character :");
        char ch = Character.toLowerCase(scn.next().charAt(0));
         if(ch=='a'||ch=='i'||ch=='o'||ch=='e'||ch=='u'){
@@ -326,9 +326,24 @@ public class problems {
         }else{
             System.out.println("Consonant");
         }
+    }
+    // Check uppercase,lowercase,digit and special character------------->
+    public static void checkKey(){
+       while(true){ Scanner scn = new Scanner(System.in);
+        System.out.print("Enter the character :");
+        char ch = scn.next().charAt(0);
+      if(Character.isUpperCase(ch)){
+          System.out.println("Uppercase");
+      }else if(Character.isLowerCase(ch)){
+          System.out.println("Lowercase");
+      }else if(Character.isDigit(ch)){
+          System.out.println("Digit");
+      }else{
+          System.out.println("Special character");
+      }
     }}
     public static void main(String[] args) {
-        checkDigit();
+        checkKey();
     }
 }
 
