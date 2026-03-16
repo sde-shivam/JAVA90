@@ -316,8 +316,19 @@ public class problems {
            System.out.print("not leap year");
        }
     }
+    //consonant and vowel ----------------->
+    public static void checkDigit(){
+       { Scanner scn = new Scanner(System.in);
+        System.out.print("Enter the character :");
+       char ch = Character.toLowerCase(scn.next().charAt(0));
+        if(ch=='a'||ch=='i'||ch=='o'||ch=='e'||ch=='u'){
+            System.out.println("Vowel");
+        }else{
+            System.out.println("Consonant");
+        }
+    }}
     public static void main(String[] args) {
-        leapYear(1000);
+        checkDigit();
     }
 }
 
