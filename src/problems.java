@@ -308,8 +308,16 @@ public class problems {
         char gender = scn.next().charAt(0);
         System.out.print("id: "+id+" name: "+name+" gender: "+gender);
     }
+    // Check leap year ------------------------>
+    public static void leapYear(int year){
+       if((year%4==0 && year%100!=0)||year%400==0 ){
+           System.out.print("leap year");
+       }else{
+           System.out.print("not leap year");
+       }
+    }
     public static void main(String[] args) {
-        employee();
+        leapYear(1000);
     }
 }
 
