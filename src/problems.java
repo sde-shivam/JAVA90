@@ -353,12 +353,36 @@ public class problems {
         int c = scn.nextInt();
         if(a+b>c && b+c>a && a+c>b){
             System.out.print("Triangle is valid");
-        }else{
+        }
+        else{
+            System.out.print("Triangle is not valid");
+        }
+    }
+    //check triangle is Equilateral,Isosceles,Scalene-------------->
+    public static void checkTriangleType(){
+        Scanner scn = new Scanner(System.in);
+        System.out.print("Enter the side A :");
+        int a = scn.nextInt();
+        System.out.print("Enter the side B :");
+        int b = scn.nextInt();
+        System.out.print("Enter the side C :");
+        int c = scn.nextInt();
+        if(a+b>c && b+c>a && a+c>b){
+            System.out.println("Triangle is valid");
+            if(a==b && b==c){
+                System.out.print("Triangle is Equilateral");
+            }else if(a==b||b==c||c==a){
+                System.out.print("Triangle is Isosceles");
+            }else{
+                System.out.print("Triangle is Scalene");
+            }
+        }
+        else{
             System.out.print("Triangle is not valid");
         }
     }
     public static void main(String[] args) {
-        checkTriangle();
+        checkTriangleType();
     }
 }
 
