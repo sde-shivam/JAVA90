@@ -342,8 +342,23 @@ public class problems {
           System.out.println("Special character");
       }
     }}
+    //check triangle is valid or not-------------->
+    public static void checkTriangle(){
+        Scanner scn = new Scanner(System.in);
+        System.out.print("Enter the side A :");
+        int a = scn.nextInt();
+        System.out.print("Enter the side B :");
+        int b = scn.nextInt();
+        System.out.print("Enter the side C :");
+        int c = scn.nextInt();
+        if(a+b>c && b+c>a && a+c>b){
+            System.out.print("Triangle is valid");
+        }else{
+            System.out.print("Triangle is not valid");
+        }
+    }
     public static void main(String[] args) {
-        checkKey();
+        checkTriangle();
     }
 }
 
