@@ -390,10 +390,10 @@ public class problems {
         int b = scn.nextInt();
         if(a%2==0 && b%2==0){
             System.out.print("numbers are Even");
-        }else if((a%2==0 && b%2!=0)||(a%2!=0 && b%2==0)){
-            System.out.print("One number is Even and one is Odd");
-        }else{
+        }else if((a%2!=0 && b%2!=0)){
             System.out.print("numbers are Odd");
+        }else{
+            System.out.print("One number is Even and one is Odd");
         }
     }
     //check the place of alphabet a-z-------------------->
@@ -408,7 +408,7 @@ public class problems {
         }
     }
     public static void main(String[] args) {
-        checkAlpha();
+        checkNum();
     }
 }
 
