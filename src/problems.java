@@ -439,8 +439,57 @@ public class problems {
                 System.out.print("Invalid Number");
         }
     }
+    // Check Days in month using switch condition------------------>
+    public static void checkMonth(){
+        Scanner scn = new Scanner(System.in);
+        while(true){System.out.print("Enter the month  :");
+        String month = scn.next();
+
+        switch(month){
+            case "jan":
+                System.out.println("31");
+                break;
+            case "feb":
+                System.out.println("28");
+                break;
+            case "mar":
+                System.out.println("31");
+                break;
+            case "apr":
+                System.out.println("30");
+                break;
+            case "may":
+                System.out.println("31");
+                break;
+            case "jun":
+                System.out.println("30");
+                break;
+            case "jul":
+                System.out.println("31");
+                break;
+            case "aug":
+                System.out.println("31");
+                break;
+            case "sep":
+                System.out.println("30");
+                break;
+            case "oct":
+                System.out.println("31");
+                break;
+            case "nov":
+                System.out.println("30");
+                break;
+            case "dec":
+                System.out.println("31");
+                break;
+            case "0":
+                System.exit(0);
+            default:
+                System.out.println("Invalid Number");
+        }
+    }}
     public static void main(String[] args) {
-        checkDays();
+        checkMonth();
     }
 }
 
