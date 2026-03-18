@@ -381,8 +381,34 @@ public class problems {
             System.out.print("Triangle is not valid");
         }
     }
+    //check weather two number are odd, even, one even and one odd------------>
+    public static void checkNum(){
+        Scanner scn = new Scanner(System.in);
+        System.out.print("Enter the first Number  :");
+        int a = scn.nextInt();
+        System.out.print("Enter the second Number  :");
+        int b = scn.nextInt();
+        if(a%2==0 && b%2==0){
+            System.out.print("numbers are Even");
+        }else if((a%2==0 && b%2!=0)||(a%2!=0 && b%2==0)){
+            System.out.print("One number is Even and one is Odd");
+        }else{
+            System.out.print("numbers are Odd");
+        }
+    }
+    //check the place of alphabet a-z-------------------->
+    public static void checkAlpha(){
+        Scanner scn = new Scanner(System.in);
+        System.out.print("Enter the Character  :");
+        char ch = Character.toLowerCase(scn.next().charAt(0));
+        if(ch>='a' && ch<='m'){
+            System.out.print("char is betn a to m");
+        }else{
+            System.out.print("char is betn n to z");
+        }
+    }
     public static void main(String[] args) {
-        checkTriangleType();
+        checkAlpha();
     }
 }
 
