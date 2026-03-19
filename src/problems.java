@@ -487,9 +487,24 @@ public class problems {
             default:
                 System.out.println("Invalid Number");
         }
-    }}
+     }
+        }
+    //check all digits are distinct in 3 digit number-------------->
+    public static void distinctNum(int num){
+           int a=0 ,b=0,c=0 ;
+             a = num %10;
+             num = num/10;
+             b = num %10;
+             num = num/10;
+             c = num % 10;
+         if(a!=b && b!=c && a!=c){
+          System.out.print("numbers are distinct");
+         }else{
+             System.out.print("numbers are not distinct");
+         }
+    }
     public static void main(String[] args) {
-        checkMonth();
+        distinctNum(177);
     }
 }
 
