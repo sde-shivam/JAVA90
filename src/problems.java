@@ -526,8 +526,22 @@ public class problems {
         System.out.println("500 : "+amt500);
         System.out.println("100 : "+amt100);
     }
+    //check number is perfect squre--------------------->
+    public static void perfectSqure(int num){
+            boolean perfectSqure = false;
+       for(int i=1;i*i<=num;i++){
+           if(i*i==num){
+               perfectSqure = true;
+           }
+       }
+        if(perfectSqure){
+            System.out.println("Number is perfect squre");
+        }else{
+            System.out.println("Number is not perfect squre");
+        }
+    }
     public static void main(String[] args) {
-        checkAmount(26700);
+        perfectSqure(49);
     }
 }
 
