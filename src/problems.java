@@ -503,8 +503,19 @@ public class problems {
              System.out.print("numbers are not distinct");
          }
     }
+    // given integer is single digit,double digit and multi-digit--------->
+    public static void CheckNumbers(int num){
+           num = Math.abs(num);
+       if(num<=9){
+           System.out.print("Single digit");
+       }else if(num<=99){
+           System.out.print("Double digit");
+       }else{
+           System.out.print("Multi digit");
+       }
+    }
     public static void main(String[] args) {
-        distinctNum(177);
+        CheckNumbers(3);
     }
 }
 
