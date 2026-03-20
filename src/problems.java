@@ -514,8 +514,20 @@ public class problems {
            System.out.print("Multi digit");
        }
     }
+    //check if an amount can be evenly divided into 2000,500,100------->
+    public static void checkAmount(int amount ){
+          int amt2000= 0,amt500= 0,amt100= 0;
+            amt2000 = amount/2000;
+            amount = amount%2000;
+            amt500 = amount/500;
+            amount = amount%500;
+            amt100 = amount/100;
+        System.out.println("2000 : "+amt2000);
+        System.out.println("500 : "+amt500);
+        System.out.println("100 : "+amt100);
+    }
     public static void main(String[] args) {
-        CheckNumbers(3);
+        checkAmount(26700);
     }
 }
 
