@@ -540,8 +540,21 @@ public class problems {
             System.out.println("Number is not perfect squre");
         }
     }
+    //check character is a letter,digit or neither--------------->
+    public static void checkChar(){
+        Scanner scn = new Scanner(System.in);
+        System.out.print("Enter the character : ");
+        char ch = Character.toLowerCase(scn.next().charAt(0));
+        if(Character.isLetter(ch)){
+            System.out.println("Letter");
+        }else if(Character.isDigit(ch)){
+            System.out.println("Digit");
+        }else{
+            System.out.println("Neither letter nor digit");
+        }
+    }
     public static void main(String[] args) {
-        perfectSqure(49);
+        checkChar();
     }
 }
 
