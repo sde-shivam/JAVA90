@@ -553,8 +553,20 @@ public class problems {
             System.out.println("Neither letter nor digit");
         }
     }
+    //divisible by 3 print "Fizz" if by 5 than "Buzz" if by both "FizzBuzz"---->
+    public static void checkCondition(int num){
+        if(num%15==0) {
+           System.out.println("FizzBuzz");
+        }else if(num%3==0){
+            System.out.println("Fizz");
+        }else if(num%5==0){
+            System.out.println("Buzz");
+        }else{
+            System.out.println("Number is not divisible by 3 or 5 or both");
+        }
+    }
     public static void main(String[] args) {
-        checkChar();
+        checkCondition(4);
     }
 }
 
