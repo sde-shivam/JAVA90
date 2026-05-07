@@ -1524,8 +1524,16 @@ public static String palindromeNum(int num,int rev,int original){
     rev = rev * 10+lastDigit;
     return palindromeNum(num/10,rev,original);
 }
+//Product of digits of a number using recursion----------------->
+public static int productNum(int num,int product){
+    if(num==0) return product;
+    int lastDigit = num %10;
+    product *=lastDigit;
+    num=num/10;
+    return productNum(num,product);
+}
 public static void main (String args[]){
-    String res = palindromeNum(1234,0,1234);
+    int res = productNum(1234,1);
     System.out.print(res);
 }
 
