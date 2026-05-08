@@ -1532,8 +1532,21 @@ public static int productNum(int num,int product){
     num=num/10;
     return productNum(num,product);
 }
+// Decimal to Binary ------------------------>
+public static int  numberToBinary(int num){
+    if(num==0 || num==1) return num;
+    int rem = num % 2;
+    return numberToBinary(num/2) * 10 + rem;
+}
+// Binary to decimal-------------------->
+public static int binaryToDecimal(int num,int power){
+    if(num==0) return 0;
+    int lastDigit = num % 10;
+    int term = (int)Math.pow(2,power) * lastDigit;
+    return binaryToDecimal(num/10,power+1)+term;
+}
 public static void main (String args[]){
-    int res = productNum(1234,1);
+    int res = binaryToDecimal(101,0);
     System.out.print(res);
 }
 
