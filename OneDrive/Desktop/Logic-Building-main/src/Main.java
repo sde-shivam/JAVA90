@@ -1545,8 +1545,18 @@ public static int binaryToDecimal(int num,int power){
     int term = (int)Math.pow(2,power) * lastDigit;
     return binaryToDecimal(num/10,power+1)+term;
 }
+//Sum of even numbers recursively-------------------->
+public static int evenSum(int num){
+    int sum=0;
+    if(num==0) return sum;
+    if(num %2==0){
+        sum +=num;
+    }
+    return evenSum(num-1)+sum;
+}
+
 public static void main (String args[]){
-    int res = binaryToDecimal(101,0);
+    int res = evenSum(5);
     System.out.print(res);
 }
 
