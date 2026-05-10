@@ -1557,12 +1557,19 @@ public static int evenSum(int num){
 // Print line of  n star recursively------------->
 public static String starPrint(int n){
     if(n==1) return "*";
-    System.out.println("*");
+    System.out.print("*");
     return starPrint(n-1);
 }
+//Print a squre of star recursively------------->
+public static void squreStarPrint(int n,int row){
+    if(n==row) return;
+    starPrint(6);
+    System.out.println();
+    squreStarPrint(n,row+1);
+}
 public static void main (String args[]){
-    String res = starPrint(2);
-    System.out.print(res);
+    squreStarPrint(6,1);
+
 }
 
 
