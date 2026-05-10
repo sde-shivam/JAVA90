@@ -1554,9 +1554,14 @@ public static int evenSum(int num){
     }
     return evenSum(num-1)+sum;
 }
-
+// Print line of  n star recursively------------->
+public static String starPrint(int n){
+    if(n==1) return "*";
+    System.out.println("*");
+    return starPrint(n-1);
+}
 public static void main (String args[]){
-    int res = evenSum(5);
+    String res = starPrint(2);
     System.out.print(res);
 }
 
