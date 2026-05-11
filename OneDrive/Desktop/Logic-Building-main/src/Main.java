@@ -1567,8 +1567,16 @@ public static void squreStarPrint(int n,int row){
     System.out.println();
     squreStarPrint(n,row+1);
 }
+// Sum of all element in array--------------->
+public static void SumArray(int[] num){
+    int sum =0;
+    for(int i=0;i<num.length;i++){
+      sum += num[i];
+  }
+    System.out.print(sum);
+}
 public static void main (String args[]){
-    squreStarPrint(6,1);
+    SumArray(new int[] {1,2,3,4});
 
 }
 
