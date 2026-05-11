@@ -1568,15 +1568,25 @@ public static void squreStarPrint(int n,int row){
     squreStarPrint(n,row+1);
 }
 // Sum of all element in array--------------->
-public static void SumArray(int[] num){
+public static void sumArray(int[] num){
     int sum =0;
     for(int i=0;i<num.length;i++){
       sum += num[i];
   }
     System.out.print(sum);
 }
+//Average of array elements----------------->
+public static void avgArray(int[] num){
+    float sum =0;
+    int size = num.length;
+    for(int i=0;i<num.length;i++){
+        sum += num[i];
+    }
+    float avg = sum/size;
+    System.out.print(avg);
+}
 public static void main (String args[]){
-    SumArray(new int[] {1,2,3,4});
+    avgArray(new int[] {2,4,6,3});
 
 }
 
