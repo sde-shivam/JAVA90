@@ -1617,9 +1617,20 @@ public static void  evenSumArray(int[] num){
     }
     System.out.println("sum : "+sum);
 }
+// Find sum of odd numbers in array-------------->
+public static void  oddSumArray(int[] num){
+    int sum=0;
+    for(int i=0;i<num.length;i++){
 
+        if(num[i] % 2!=0){
+            System.out.println(num[i]);
+            sum+=num[i];
+        }
+    }
+    System.out.println("sum : "+sum);
+}
 public static void main (String args[]){
-    evenSumArray(new int[] {1,2,3,4,5,6});
+    oddSumArray(new int[] {1,2,3,4,5,6});
 }
 
 
