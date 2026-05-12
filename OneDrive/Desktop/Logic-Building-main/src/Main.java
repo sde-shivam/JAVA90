@@ -1605,7 +1605,7 @@ public static boolean uniqueElement(int[] num){
     }
     return num.length==element.size();
 }
-//Find sun of even numbers in array-------------->
+//Find sum of even numbers in array-------------->
 public static void  evenSumArray(int[] num){
     int sum=0;
     for(int i=0;i<num.length;i++){
