@@ -1629,8 +1629,30 @@ public static void  oddSumArray(int[] num){
     }
     System.out.println("sum : "+sum);
 }
+// Find the count of prime number in array------->
+public static void  primeElementInArray(int[] num){
+    int count = 0;
+    for(int i=0;i<num.length;i++){
+        boolean isPrime = true;
+        if(num[i]<=1){
+            isPrime = false;
+        }
+        for(int j=2;j<=Math.sqrt(num[i]);j++){
+            if(num[i] % j==0){
+               isPrime = false;
+               break;
+            }
+        }
+        if(isPrime){
+            System.out.print(num[i] + ",");
+            count++;
+        }
+   }
+    System.out.println();
+    System.out.print("count :"+count);
+  }
 public static void main (String args[]){
-    oddSumArray(new int[] {1,2,3,4,5,6});
+    primeElementInArray(new int[] {2,11,43,65,76,34,67,34,567});
 }
 
 
