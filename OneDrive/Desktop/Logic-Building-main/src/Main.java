@@ -1664,8 +1664,21 @@ public static void divNumbers(int[] num){
     System.out.println();
     System.out.print("Count :"+count);
 }
+//Count how many element is perfect squre is array------------>
+public static void perfectSqureInArr(int[] num){
+    int count = 0;
+    for(int i=0;i<num.length;i++){
+        int sqrt = (int)Math.sqrt(num[i]);
+        if( sqrt * sqrt== num[i]){
+            System.out.print(num[i]+",");
+            count++;
+        }
+    }
+    System.out.println();
+    System.out.print("count : "+count);
+  }
 public static void main (String args[]){
-    divNumbers(new int[] {12,15,16,20,45});
+    perfectSqureInArr(new int[] {12,15,16,36,81,20,45});
 }
 
 
