@@ -1597,8 +1597,16 @@ public static int returnIndex(int[] num){
     }
     return index;
 }
+//Check if all the element in an array is unique----------->
+public static boolean uniqueElement(int[] num){
+    Set<Integer> element= new HashSet<>();
+    for(int i=0;i<num.length;i++){
+        element.add(num[i]);
+    }
+    return num.length==element.size();
+}
 public static void main (String args[]){
-    int res = returnIndex(new int[] {24,74,36,83,45,98,34});
+    boolean res = uniqueElement(new int[] {74,36,83,45,98,24,34});
     System.out.print(res);
 
 }
