@@ -1605,10 +1605,21 @@ public static boolean uniqueElement(int[] num){
     }
     return num.length==element.size();
 }
-public static void main (String args[]){
-    boolean res = uniqueElement(new int[] {74,36,83,45,98,24,34});
-    System.out.print(res);
+//Find sun of even numbers in array-------------->
+public static void  evenSumArray(int[] num){
+    int sum=0;
+    for(int i=0;i<num.length;i++){
 
+        if(num[i] % 2==0){
+            System.out.println(num[i]);
+            sum+=num[i];
+        }
+    }
+    System.out.println("sum : "+sum);
+}
+
+public static void main (String args[]){
+    evenSumArray(new int[] {1,2,3,4,5,6});
 }
 
 
