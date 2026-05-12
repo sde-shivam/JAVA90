@@ -1629,7 +1629,7 @@ public static void  oddSumArray(int[] num){
     }
     System.out.println("sum : "+sum);
 }
-// Find the count of prime number in array------->
+// Find the count of prime number in array---------------->
 public static void  primeElementInArray(int[] num){
     int count = 0;
     for(int i=0;i<num.length;i++){
@@ -1651,8 +1651,21 @@ public static void  primeElementInArray(int[] num){
     System.out.println();
     System.out.print("count :"+count);
   }
+
+//count the element in an array which is divisible by 3 and 5 both----------------->
+public static void divNumbers(int[] num){
+    int count = 0;
+    for(int i=0;i<num.length;i++){
+        if(num[i] % 15 ==0){
+           System.out.print(num[i]+",");
+           count++;
+        }
+    }
+    System.out.println();
+    System.out.print("Count :"+count);
+}
 public static void main (String args[]){
-    primeElementInArray(new int[] {2,11,43,65,76,34,67,34,567});
+    divNumbers(new int[] {12,15,16,20,45});
 }
 
 
