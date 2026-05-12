@@ -1585,8 +1585,21 @@ public static void avgArray(int[] num){
     float avg = sum/size;
     System.out.print(avg);
 }
+// Return index of max element in Array--------------->
+public static int returnIndex(int[] num){
+    int max = Integer.MIN_VALUE;
+    int index=0;
+    for(int i=0;i<num.length;i++){
+        if(max<num[i]){
+            max = num[i];
+            index=i;
+        }
+    }
+    return index;
+}
 public static void main (String args[]){
-    avgArray(new int[] {2,4,6,3});
+    int res = returnIndex(new int[] {24,74,36,83,45,98,34});
+    System.out.print(res);
 
 }
 
