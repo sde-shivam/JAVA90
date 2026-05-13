@@ -1726,8 +1726,14 @@ public static void replaceFirstAndLastEl(int[] num) {
         System.out.print(el + ",");
     }
 }
+// Reverse an array------------>
+public static void reverseArr(int[] num){
+    for(int i=num.length-1;i>=0;i--){
+        System.out.print(num[i] + ",");
+    }
+}
 public static void main (String args[]){
-    replaceFirstAndLastEl(new int[] {1,2,3,4});
+    reverseArr(new int[] {1,2,3,4,5,6});
 
 }
 
