@@ -1743,7 +1743,17 @@ public static  void rotateArrOneLeft(int[] num){
         System.out.print(el + ",");
     }
 }
-
+//Rotate an array by one position to the Right------------>
+public static  void rotateArrOneRight(int[] num){
+    int last = num[num.length-1];
+    for(int i=num.length-1;i>0;i--){
+        num[i] = num[i-1];
+    }
+    num[0]=last;
+    for(int el: num){
+        System.out.print(el + ",");
+    }
+}
 public static void main (String args[]){
     rotateArrOneRight(new int[] {1,2,3,4,5,6});
 
