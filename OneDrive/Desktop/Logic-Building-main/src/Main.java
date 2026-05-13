@@ -1732,8 +1732,20 @@ public static void reverseArr(int[] num){
         System.out.print(num[i] + ",");
     }
 }
+//Rotate an array by one position to the left------------>
+public static  void rotateArrOneLeft(int[] num){
+    int first = num[0];
+    for(int i=0;i<num.length-1;i++){
+        num[i] = num[i+1];
+    }
+    num[num.length-1] = first;
+    for(int el: num){
+        System.out.print(el + ",");
+    }
+}
+
 public static void main (String args[]){
-    reverseArr(new int[] {1,2,3,4,5,6});
+    rotateArrOneRight(new int[] {1,2,3,4,5,6});
 
 }
 
