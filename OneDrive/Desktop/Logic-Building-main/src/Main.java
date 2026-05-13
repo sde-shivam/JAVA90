@@ -1701,8 +1701,24 @@ public static void replaceWithZero(int[] num){
         System.out.print(el+",");
     }
 }
+// Replce every Even number with 1 and odd number with zero--------------->
+public static void replaceWithZeroAndOne(int[] num){
+    int[] newArr = new int[num.length];
+    for(int i=0;i<num.length;i++){
+        if(num[i]<1){
+            newArr[i]= -1;
+        }else if(num[i] % 2==0){
+            newArr[i] = 1;
+        }else{
+            newArr[i] = 0;
+        }
+    }
+    for(int el : newArr){
+        System.out.print(el+",");
+    }
+}
 public static void main (String args[]){
-    replaceWithZero(new int[] {-1,2,3,-4,5,-6,7});
+    replaceWithZeroAndOne(new int[] {1,2,3,4,5,6,7});
 }
 
 
