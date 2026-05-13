@@ -1687,8 +1687,22 @@ public static void squreArr(int[] num){
         System.out.print(squres+",");
     }
 }
+// Replce every negative number with zero--------------->
+public static void replaceWithZero(int[] num){
+    int[] newArr = new int[num.length];
+    for(int i=0;i<num.length;i++){
+        if(num[i]<0){
+            newArr[i] = 0;
+        }else{
+            newArr[i] = num[i];
+        }
+    }
+    for(int el : newArr){
+        System.out.print(el+",");
+    }
+}
 public static void main (String args[]){
-    squreArr(new int[] {1,2,3,4,5,6,7});
+    replaceWithZero(new int[] {-1,2,3,-4,5,-6,7});
 }
 
 
