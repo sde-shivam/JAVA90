@@ -1717,8 +1717,18 @@ public static void replaceWithZeroAndOne(int[] num){
         System.out.print(el+",");
     }
 }
+//swap first and last element --------------->
+public static void replaceFirstAndLastEl(int[] num) {
+    int temp = num[0];
+    num[0] = num[num.length - 1];
+    num[num.length - 1] = temp;
+     for (int el : num) {
+        System.out.print(el + ",");
+    }
+}
 public static void main (String args[]){
-    replaceWithZeroAndOne(new int[] {1,2,3,4,5,6,7});
+    replaceFirstAndLastEl(new int[] {1,2,3,4});
+
 }
 
 
