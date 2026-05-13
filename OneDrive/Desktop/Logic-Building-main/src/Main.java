@@ -1677,8 +1677,18 @@ public static void perfectSqureInArr(int[] num){
     System.out.println();
     System.out.print("count : "+count);
   }
+ //Create new array with squre of each element ------------->
+public static void squreArr(int[] num){
+    int[] squre = new int[num.length];
+    for(int i=0;i<num.length;i++){
+        squre[i] = num[i] * num[i];
+    }
+    for(int squres : squre){
+        System.out.print(squres+",");
+    }
+}
 public static void main (String args[]){
-    perfectSqureInArr(new int[] {12,15,16,36,81,20,45});
+    squreArr(new int[] {1,2,3,4,5,6,7});
 }
 
 
