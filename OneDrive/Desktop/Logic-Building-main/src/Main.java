@@ -1754,8 +1754,19 @@ public static  void rotateArrOneRight(int[] num){
         System.out.print(el + ",");
     }
 }
+//Swap alternate element in array--------------->
+public static void alternateSwap(int[] num){
+    for(int i=0;i<num.length-1;i+=2){
+        int temp = num[i];
+        num[i] = num[i+1];
+        num[i+1] = temp;
+    }
+    for(int j : num){
+        System.out.print(j+",");
+    }
+}
 public static void main (String args[]){
-    rotateArrOneRight(new int[] {1,2,3,4,5,6});
+    alternateSwap(new int[] {1,2,3,4,5,6});
 
 }
 
