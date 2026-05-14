@@ -1,6 +1,6 @@
 import java.util.*;
 import java.lang.String;
-import java.util.Scanner;
+import java.util.Arrays;
 class Main {
 
     //Bionomial Function------->
@@ -1794,8 +1794,28 @@ public static void compareTwoArr(int[] arr1, int[] arr2){
         System.out.print("values are not equal");
     }
 }
+//Compare array if they contain the same element(ignore order)----->
+public static void compareArr(int[] arr1,int[] arr2){
+    boolean equalValues = true;
+    if(arr1.length != arr2.length){
+        System.out.print("Arr is not equal");
+        return;
+    }
+    Arrays.sort(arr1);
+    Arrays.sort(arr2);
+    for(int i=0;i<arr1.length;i++){
+        if(arr1[i] != arr2[i]){
+            equalValues = false;
+        }
+    }
+    if(equalValues){
+        System.out.print("values are equal");
+    }else{
+        System.out.print("values are not equal");
+    }
+}
 public static void main (String args[]){
-    compareTwoArr(new int[] {1,2,4,5,6},new int[] {1,2,3,4,5,6});
+    compareArr(new int[] {1,2,3,4,5,6},new int[] {6,2,4,3,5,1});
 
 }
 
