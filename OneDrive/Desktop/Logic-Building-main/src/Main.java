@@ -1776,8 +1776,26 @@ public static void newArr(int[] num ){
     }
 
 }
+//Compare two array(same element,same order & size)--------------->
+public static void compareTwoArr(int[] arr1, int[] arr2){
+    boolean equalValues = true;
+    if(arr1.length != arr2.length){
+        System.out.print("Arr is not equal");
+        return;
+    }
+    for(int i=0;i<arr1.length;i++){
+        if(arr1[i] != arr2[i]){
+            equalValues = false;
+        }
+    }
+    if(equalValues){
+        System.out.print("values are equal");
+    }else{
+        System.out.print("values are not equal");
+    }
+}
 public static void main (String args[]){
-    newArr(new int[] {1,2,3,4,5,6});
+    compareTwoArr(new int[] {1,2,4,5,6},new int[] {1,2,3,4,5,6});
 
 }
 
