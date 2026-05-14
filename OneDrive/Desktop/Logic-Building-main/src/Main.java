@@ -1765,8 +1765,19 @@ public static void alternateSwap(int[] num){
         System.out.print(j+",");
     }
 }
+//Copy one array to another----------------->
+public static void newArr(int[] num ){
+    int[] newArr = new int[num.length];
+    for(int i=0;i<num.length;i++){
+        newArr[i] = num[i];
+    }
+    for(int el:newArr){
+        System.out.print(el+",");
+    }
+
+}
 public static void main (String args[]){
-    alternateSwap(new int[] {1,2,3,4,5,6});
+    newArr(new int[] {1,2,3,4,5,6});
 
 }
 
