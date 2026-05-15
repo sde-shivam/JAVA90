@@ -1814,8 +1814,22 @@ public static void compareArr(int[] arr1,int[] arr2){
         System.out.print("values are not equal");
     }
 }
+// Merge 2 array into 3rd array----------------->
+public static void mergeArr(int[] arr1,int[] arr2){
+    int length = arr1.length+arr2.length;
+    int[] newArr = new int[length];
+    for(int i=0;i<arr1.length;i++){
+        newArr[i]=arr1[i];
+        }
+    for(int j=arr1.length;j<newArr.length;j++){ //we can use 2 variables j,k in loop also
+        newArr[j] = arr2[j-arr1.length];
+    }
+    for(int el: newArr){
+        System.out.print(el+",");
+    }
+    }
 public static void main (String args[]){
-    compareArr(new int[] {1,2,3,4,5,6},new int[] {6,2,4,3,5,1});
+    mergeArr(new int[] {1,2,3,4,5},new int[] {6,7,8,9});
 
 }
 
