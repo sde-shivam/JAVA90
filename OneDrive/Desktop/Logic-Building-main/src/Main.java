@@ -1828,10 +1828,23 @@ public static void mergeArr(int[] arr1,int[] arr2){
         System.out.print(el+",");
     }
     }
-public static void main (String args[]){
-    mergeArr(new int[] {1,2,3,4,5},new int[] {6,7,8,9});
-
+ // common elements beetween 2 array------------------>
+public static void commonElementInArr(int[] arr1,int[] arr2){
+    List<Integer> list = new ArrayList<>();
+    for(int i=0;i<arr1.length;i++){
+        for(int j=0;j<arr2.length;j++){
+            if(arr1[i]==arr2[j]){
+                list.add(arr1[i]);
+            }
+        }
+    }
+    for(int el:list) {
+        System.out.print(el + ",");
+    }
 }
+public static void main (String args[]){
+    commonElementInArr(new int[]{1, 2, 3, 4, 5}, new int[]{6, 1, 8, 9, 4, 2});
+    }
 
 
 
