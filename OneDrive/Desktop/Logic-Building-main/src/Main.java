@@ -1842,8 +1842,20 @@ public static void commonElementInArr(int[] arr1,int[] arr2){
         System.out.print(el + ",");
     }
 }
+// elements which are in first but not in second------------------>
+public static void noCommonElementInArr(int[] arr1,int[] arr2){
+Set<Integer> set = new HashSet<>();
+    for(int el2:arr2){
+        set.add(el2);
+    }
+    for(int el1:arr1) {
+        if (!set.contains(el1)) {
+            System.out.print(el1 + ",");
+        }
+    }
+            }
 public static void main (String args[]){
-    commonElementInArr(new int[]{1, 2, 3, 4, 5}, new int[]{6, 1, 8, 9, 4, 2});
+    noCommonElementInArr(new int[]{1, 2, 3, 4, 5}, new int[]{6, 1, 8, 9, 4});
     }
 
 
