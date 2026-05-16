@@ -1854,8 +1854,17 @@ Set<Integer> set = new HashSet<>();
         }
     }
             }
+// Sum of corresponding elements A[i] + B[j]----------------------->
+public static void sumOfElInTwoArr(int[] arr1,int[] arr2){
+    int sum=0;
+    for(int i=0;i<arr1.length;i++){
+        sum=arr1[i]+arr2[i];
+        System.out.println("Sum : "+sum);
+    }
+
+    }
 public static void main (String args[]){
-    noCommonElementInArr(new int[]{1, 2, 3, 4, 5}, new int[]{6, 1, 8, 9, 4});
+    sumOfElInTwoArr(new int[]{1, 2, 3, 4, 5},new int[]{3,6,3,6,8});
     }
 
 
