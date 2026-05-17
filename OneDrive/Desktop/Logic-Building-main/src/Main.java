@@ -1857,14 +1857,28 @@ Set<Integer> set = new HashSet<>();
 // Sum of corresponding elements A[i] + B[j]----------------------->
 public static void sumOfElInTwoArr(int[] arr1,int[] arr2){
     int sum=0;
-    for(int i=0;i<arr1.length;i++){
+    int minLength = Math.min(arr1.length,arr2.length);
+    for(int i=0;i<minLength;i++){
         sum=arr1[i]+arr2[i];
         System.out.println("Sum : "+sum);
     }
-
     }
+ // Extra Character in 2 String---------------->
+public static char extraChar(String s1,String s2){
+    int extra = 0;
+    for(int i=0;i<s1.length();i++) {
+        char ch1 = s1.charAt(i);
+        extra ^=ch1;
+    }
+    for(int i=0;i<s2.length();i++) {
+        char ch2 = s2.charAt(i);
+        extra ^=ch2;
+    }
+    return (char)extra;
+}
 public static void main (String args[]){
-    sumOfElInTwoArr(new int[]{1, 2, 3, 4, 5},new int[]{3,6,3,6,8});
+    char res = extraChar("shivam","shivamd");
+    System.out.print(res);
     }
 
 
