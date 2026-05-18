@@ -1876,11 +1876,21 @@ public static char extraChar(String s1,String s2){
     }
     return (char)extra;
 }
-public static void main (String args[]){
-    char res = extraChar("shivam","shivamd");
-    System.out.print(res);
+//Frequency of numbers in array using hashmap------------------>
+public static void freqOfNumbers(int[] num){
+    Map<Integer,Integer> freq = new HashMap<>();
+    for(int nums :num) {
+        if (freq.containsKey(nums)) {
+            freq.put(nums, freq.get(nums) + 1);
+        } else {
+            freq.put(nums, 1);
+        }
     }
-
+    System.out.println(freq);
+}
+public static void main (String args[]) {
+    freqOfNumbers(new int[]{1, 2, 3, 4, 4, 5, 5});
+}
 
 
 
