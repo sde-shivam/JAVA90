@@ -1888,8 +1888,22 @@ public static void freqOfNumbers(int[] num){
     }
     System.out.println(freq);
 }
+// Print all element which appear more than once----------->
+public static void freqOfNumbersMoreThan1(int[] num){
+    Map<Integer,Integer> freq = new HashMap<>();
+    for(int nums :num) {
+        if (freq.containsKey(nums)) {
+            freq.put(nums, freq.get(nums) + 1);
+        } else {
+            freq.put(nums, 1);
+        }
+        if(freq.get(nums)>1) {
+            System.out.println(nums+" = "+freq.get(nums));
+        }
+    }
+}
 public static void main (String args[]) {
-    freqOfNumbers(new int[]{1, 2, 3, 4, 4, 5, 5});
+    freqOfNumbersMoreThan1(new int[]{1, 2, 3, 4, 4, 5, 5});
 }
 
 
