@@ -1902,8 +1902,23 @@ public static void freqOfNumbersMoreThan1(int[] num){
         }
     }
 }
+// ARRAY IS SORTED IN ASCENDING ORDER--------------->
+public static void ascSorting(int[] num){
+    for(int i=0;i<num.length;i++){
+        for(int j=i+1;j<num.length;j++){
+           if(num[i]>num[j]){
+               int temp = num[i];
+               num[i] = num[j];
+               num[j] = temp;
+           }
+        }
+    }
+    for(int el : num){
+        System.out.print(el);
+    }
+}
 public static void main (String args[]) {
-    freqOfNumbersMoreThan1(new int[]{1, 2, 3, 4, 4, 5, 5});
+    ascSorting(new int[]{2,5,3,4,1});
 }
 
 
