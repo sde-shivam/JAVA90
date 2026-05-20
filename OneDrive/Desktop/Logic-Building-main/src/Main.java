@@ -1917,8 +1917,23 @@ public static void ascSorting(int[] num){
         System.out.print(el);
     }
 }
+// ARRAY IS SORTED IN DESCENDING ORDER--------------->
+public static void descSorting(int[] num){
+    for(int i=0;i<num.length;i++){
+        for(int j=i+1;j<num.length;j++){
+            if(num[i]<num[j]){
+                int temp = num[i];
+                num[i] = num[j];
+                num[j] = temp;
+            }
+        }
+    }
+    for(int el : num){
+        System.out.print(el);
+    }
+}
 public static void main (String args[]) {
-    ascSorting(new int[]{2,5,3,4,1});
+    descSorting(new int[]{2,5,3,4,1});
 }
 
 
