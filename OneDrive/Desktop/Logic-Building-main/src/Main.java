@@ -1932,8 +1932,23 @@ public static void descSorting(int[] num){
         System.out.print(el);
     }
 }
+// Second smallest element in array------------>
+public static void secondSmallest(int[] num){
+    int smallest=Integer.MAX_VALUE;
+    int secondSmallest=Integer.MAX_VALUE;
+    for(int i=0;i<num.length;i++){
+        if(smallest>num[i]){
+            secondSmallest = smallest;
+            smallest = num[i];
+        }else if(secondSmallest>num[i] && secondSmallest != smallest){
+            secondSmallest = num[i];
+        }
+    }
+    System.out.println("smallest :"+smallest);
+    System.out.println("secondSmallest :"+secondSmallest);
+}
 public static void main (String args[]) {
-    descSorting(new int[]{2,5,3,4,1});
+    secondSmallest(new int[]{10,45,67,3,6,9});
 }
 
 
