@@ -1947,8 +1947,26 @@ public static void secondSmallest(int[] num){
     System.out.println("smallest :"+smallest);
     System.out.println("secondSmallest :"+secondSmallest);
 }
+// Diffence beetween the largest and smallest element in array----------->
+public static void diffOfEl(int[] num ){
+    int smallest=Integer.MAX_VALUE;
+    int largest=Integer.MIN_VALUE;
+    int diff =0;
+    for(int i=0;i<num.length;i++){
+        if(smallest>num[i]){
+            smallest = num[i];
+        }
+        if(largest<num[i]){
+            largest = num[i];
+        }
+    }
+    diff = largest - smallest;
+    System.out.println("smallest :"+smallest);
+    System.out.println("largest :"+largest);
+    System.out.println("Difference :"+diff);
+}
 public static void main (String args[]) {
-    secondSmallest(new int[]{10,45,67,3,6,9});
+    diffOfEl(new int[]{1,2,3,4,5,6});
 }
 
 
