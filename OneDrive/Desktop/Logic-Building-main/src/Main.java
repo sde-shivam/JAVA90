@@ -1965,8 +1965,31 @@ public static void diffOfEl(int[] num ){
     System.out.println("largest :"+largest);
     System.out.println("Difference :"+diff);
 }
+// sum of elements except largest and smallest in array----------->
+public static void sumOfOtherEl(int[] num ){
+    int smallest=Integer.MAX_VALUE;
+    int largest=Integer.MIN_VALUE;
+
+    for(int i=0;i<num.length;i++){
+        if(smallest>num[i]){
+            smallest = num[i];
+        }
+        if(largest<num[i]){
+            largest = num[i];
+        }
+    }
+    int sum=0;
+    for(int i=0;i<num.length;i++){
+    if(num[i] != largest && num[i] != smallest) {
+        sum += num[i];
+    }
+     }
+    System.out.println("smallest :"+smallest);
+    System.out.println("largest :"+largest);
+    System.out.println("Sum of remaining element :"+sum);
+}
 public static void main (String args[]) {
-    diffOfEl(new int[]{1,2,3,4,5,6});
+    sumOfOtherEl(new int[]{1,2,3,4,5,6});
 }
 
 
