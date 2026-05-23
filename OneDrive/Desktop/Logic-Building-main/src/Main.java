@@ -1988,8 +1988,24 @@ public static void sumOfOtherEl(int[] num ){
     System.out.println("largest :"+largest);
     System.out.println("Sum of remaining element :"+sum);
 }
+//Count the pairs of element have sum equal to a given number k----------->
+public static void searchElement(int[] num,int target) {
+    int count=0;
+    List<List<Integer>> list = new ArrayList<>();
+    for (int i = 0; i < num.length; i++) {
+        for (int j = i + 1; j < num.length; j++) {
+            if(num[i]+num[j]==target){
+                list.add(Arrays.asList(num[i], num[j]));
+                count++;
+
+            }
+        }
+    }
+    System.out.println(list);
+    System.out.println("Count : "+count);
+}
 public static void main (String args[]) {
-    sumOfOtherEl(new int[]{1,2,3,4,5,6});
+    searchElement(new int[]{1,2,3,4,5,6},7);
 }
 
 
