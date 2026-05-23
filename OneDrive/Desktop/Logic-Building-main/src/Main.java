@@ -2020,10 +2020,25 @@ public static void greaterThanAvg(int[] num){
             count++;
         }
     }
+    System.out.println();
     System.out.print("Count :"+count);
 }
+//print frq of each distinct element-------------->
+public static void freqOfDistinct(int[] num) {
+    Map<Integer, Integer> freq = new HashMap<>();
+    for (int i = 0; i < num.length; i++) {
+        if (freq.containsKey(num[i])) {
+            freq.put(num[i], freq.get(num[i]) + 1);
+        } else {
+            freq.put(num[i], 1);
+        }
+    }
+    for (int key : freq.keySet()) {
+        System.out.println(key + " -> " + freq.get(key));
+    }
+}
 public static void main (String args[]) {
-    greaterThanAvg(new int[]{1,2,3,4,5,6,7,8,9});
+    freqOfDistinct(new int[]{1,2,2,3,4,5,6,7,8,9});
 }
 
 
