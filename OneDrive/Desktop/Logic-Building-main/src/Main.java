@@ -2004,8 +2004,26 @@ public static void searchElement(int[] num,int target) {
     System.out.println(list);
     System.out.println("Count : "+count);
 }
+//count the elements which are greater than avg of array-------->
+public static void greaterThanAvg(int[] num){
+    int sum = 0;
+    int len = num.length;
+    int count =0;
+    for(int i=0;i<num.length;i++){
+        sum+=num[i];
+    }
+    int avg = sum/len;
+    System.out.println("Avg : "+avg);
+    for(int i=0;i<num.length;i++){
+        if(num[i]>avg){
+            System.out.print(num[i]+",");
+            count++;
+        }
+    }
+    System.out.print("Count :"+count);
+}
 public static void main (String args[]) {
-    searchElement(new int[]{1,2,3,4,5,6},7);
+    greaterThanAvg(new int[]{1,2,3,4,5,6,7,8,9});
 }
 
 
