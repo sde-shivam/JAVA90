@@ -2037,8 +2037,24 @@ public static void freqOfDistinct(int[] num) {
         System.out.println(key + " -> " + freq.get(key));
     }
 }
+//print all unique elements those occur exactly once -------------->
+public static void freqOfDistinctOnly1(int[] num) {
+    Map<Integer, Integer> freq = new HashMap<>();
+    for (int i = 0; i < num.length; i++) {
+      if(freq.containsKey(num[i])){
+            freq.put(num[i],freq.get(num[i])+1);
+      }else{
+          freq.put(num[i],1);
+      }
+    }
+    for(int key : freq.keySet()){
+        if(freq.get(key)<2) {
+            System.out.println(key + "-->" + freq.get(key));
+        }
+    }
+}
 public static void main (String args[]) {
-    freqOfDistinct(new int[]{1,2,2,3,4,5,6,7,8,9});
+    freqOfDistinctOnly1(new int[]{1,2,2,3,4});
 }
 
 
