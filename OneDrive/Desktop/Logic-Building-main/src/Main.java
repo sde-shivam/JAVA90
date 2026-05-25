@@ -2053,8 +2053,22 @@ public static void freqOfDistinctOnly1(int[] num) {
         }
     }
 }
+public static void oprString(String str){
+    System.out.println("Length of String : "+str.length());
+    System.out.println("First Char: "+str.charAt(0)+","+" Last Char :"+str.charAt(str.length()-1));
+    System.out.println("Uppercase : "+str.toUpperCase());
+    System.out.println("Lowercase : "+str.toLowerCase());
+    int count = 0;
+    for(int i=0;i<str.length();i++){
+        char ch = str.charAt(i);
+        if(Character.isLetter(ch)){
+            count++;
+        }
+    }
+    System.out.println("Count of char in String: "+count);
+}
 public static void main (String args[]) {
-    freqOfDistinctOnly1(new int[]{1,2,2,3,4});
+    oprString("Shivam ");
 }
 
 
