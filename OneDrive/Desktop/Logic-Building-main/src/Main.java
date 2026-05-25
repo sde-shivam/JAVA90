@@ -2053,6 +2053,7 @@ public static void freqOfDistinctOnly1(int[] num) {
         }
     }
 }
+//String operations--------------------------------->
 public static void oprString(String str){
     System.out.println("Length of String : "+str.length());
     System.out.println("First Char: "+str.charAt(0)+","+" Last Char :"+str.charAt(str.length()-1));
@@ -2067,8 +2068,19 @@ public static void oprString(String str){
     }
     System.out.println("Count of char in String: "+count);
 }
+//Count of words in a string ------------------------>
+public static void countWords(String str){
+    int count = 0;
+    String[] words = str.split(" ");
+    for(String word : words){
+        System.out.print(word+",");
+        count++;
+    }
+    System.out.println();
+    System.out.print("Count of words in string : "+count);
+}
 public static void main (String args[]) {
-    oprString("Shivam ");
+    countWords("Shivam is good boy");
 }
 
 
