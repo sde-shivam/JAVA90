@@ -2079,8 +2079,12 @@ public static void countWords(String str){
     System.out.println();
     System.out.print("Count of words in string : "+count);
 }
+// Concat 2 strings------------------------->
+public static void concatStr(String str1,String str2){
+    System.out.print("Concated String--->"+str1.concat(str2));
+}
 public static void main (String args[]) {
-    countWords("Shivam is good boy");
+    concatStr("Shivam is good boy.","he is pursuing MCA");
 }
 
 
