@@ -2105,9 +2105,15 @@ public static String laxiOrder(String str1, String str2){
         return "Strings are equal";
     }
 }
+//Print the ASCII value of each character in a string----------->
+public static void printAscii(String str){
+    for(int i=0;i<str.length();i++){
+       char ch = str.charAt(i);
+       System.out.println(ch+" : "+(int)ch);
+    }
+  }
 public static void main (String args[]) {
-    String res= laxiOrder("shivo","shivn");
-    System.out.print(res);
+    printAscii("shivam");
 }
 
 
