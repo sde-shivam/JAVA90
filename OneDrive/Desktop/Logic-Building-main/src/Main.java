@@ -2083,8 +2083,31 @@ public static void countWords(String str){
 public static void concatStr(String str1,String str2){
     System.out.print("Concated String--->"+str1.concat(str2));
 }
+// Comapre two Strings lexicographically-------------------->
+public static String laxiOrder(String str1, String str2){
+    int len = Math.min(str1.length(),str2.length());
+    for(int i=0;i<len;i++){
+        char ch1 = str1.charAt(i);
+        char ch2 = str2.charAt(i);
+        if(ch1==ch2){
+          continue;
+        } else if(ch1<ch2){
+            return " str1 is first";
+        }else{
+            return " str2 is first";
+        }
+    }
+    if(str1.length()<str2.length()){
+        return " str1 is first";
+    }else if(str1.length()>str2.length()){
+        return " str2 is first";
+    }else{
+        return "Strings are equal";
+    }
+}
 public static void main (String args[]) {
-    concatStr("Shivam is good boy.","he is pursuing MCA");
+    String res= laxiOrder("shivo","shivn");
+    System.out.print(res);
 }
 
 
