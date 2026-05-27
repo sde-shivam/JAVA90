@@ -2112,8 +2112,21 @@ public static void printAscii(String str){
        System.out.println(ch+" : "+(int)ch);
     }
   }
+  // check whether the string is empty or not----------->
+    public static void checkEmptyString(String str){
+        if(str==null) {
+            System.out.println("string is empty");
+            return;
+        }
+       String origString = str.trim();
+       if(origString.length()==0){
+           System.out.println("string is empty");
+       }else{
+           System.out.println("string is not empty");
+       }
+    }
 public static void main (String args[]) {
-    printAscii("shivam");
+    checkEmptyString(null);
 }
 
 
