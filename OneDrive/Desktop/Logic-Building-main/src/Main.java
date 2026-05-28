@@ -2139,8 +2139,25 @@ public static void countVowCons(String str){
     System.out.println("Consonants : "+cons);
     System.out.println("Vowel : "+vow);
 }
+//Count Digits,Letters and special Character in a given string--------------->
+public static void countDigLetSpe(String str){
+    int digit =0, letter = 0, specialChar=0;
+    for(int i=0;i<str.length();i++){
+        char ch = str.charAt(i);
+        if(Character.isLetter(ch)){
+            letter++;
+        }else if(Character.isDigit(ch)){
+            digit++;
+        }else{
+            specialChar++;
+        }
+    }
+    System.out.println("Digits : "+digit);
+    System.out.println("Letter : "+letter);
+    System.out.println("Special Character : "+specialChar);
+}
 public static void main (String args[]) {
-    countVowCons("SHIVAM");
+    countDigLetSpe("SHIVAM2345@#$% rty");
 }
 
 
