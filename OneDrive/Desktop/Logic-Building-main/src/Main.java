@@ -2125,8 +2125,22 @@ public static void printAscii(String str){
            System.out.println("string is not empty");
        }
     }
+//Count vowels and consonants are in a string------------>
+public static void countVowCons(String str){
+    int cons =0,vow = 0;
+    for(int i=0;i<str.length();i++){
+        char ch = str.charAt(i);
+        if((ch=='a'||ch=='A')||(ch=='e'||ch=='E')||(ch=='i'||ch=='I')||(ch=='o'||ch=='O')||(ch=='u'||ch=='U')){
+            vow++;
+        }else{
+            cons++;
+        }
+    }
+    System.out.println("Consonants : "+cons);
+    System.out.println("Vowel : "+vow);
+}
 public static void main (String args[]) {
-    checkEmptyString(null);
+    countVowCons("SHIVAM");
 }
 
 
