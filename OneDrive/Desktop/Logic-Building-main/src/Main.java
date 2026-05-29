@@ -2156,8 +2156,22 @@ public static void countDigLetSpe(String str){
     System.out.println("Letter : "+letter);
     System.out.println("Special Character : "+specialChar);
 }
+//Count Uppercase and lowercase character in string------------->
+public static void countUppLow(String str){
+    int upper = 0,lower = 0;
+    for(int i=0;i<str.length();i++){
+        char ch = str.charAt(i);
+        if(Character.isLowerCase(ch)){
+            lower++;
+        }else{
+            upper++;
+        }
+    }
+    System.out.println("Uppercase character : "+upper);
+    System.out.println("Lowercase character : "+lower);
+}
 public static void main (String args[]) {
-    countDigLetSpe("SHIVAM2345@#$% rty");
+    countUppLow("VInayak");
 }
 
 
