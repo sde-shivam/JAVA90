@@ -2184,7 +2184,18 @@ public static void countFreq(String str){
         }
     }
 }
-
+// Count spaces in the sentance ----------------->
+public static void countSpace(String str){
+    str = str.toLowerCase();
+    int count=0;
+    for(int i=0;i<str.length();i++){
+        char ch = str.charAt(i);
+        if(Character.isSpace(ch)){
+         count++;
+        }
+    }
+    System.out.println("Count : "+count);
+}
 public static void main (String args[]) {
     countSpace("shi vam is b usy with hi  s stud ies");
 }
