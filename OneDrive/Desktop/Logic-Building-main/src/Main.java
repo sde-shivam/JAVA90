@@ -2170,8 +2170,23 @@ public static void countUppLow(String str){
     System.out.println("Uppercase character : "+upper);
     System.out.println("Lowercase character : "+lower);
 }
+// Frequency of character in a string (without map)--------->
+public static void countFreq(String str){
+    str = str.toLowerCase();
+    int[] freq = new int[256];
+    for(int i=0;i<str.length();i++){
+        char ch = str.charAt(i);
+        freq[ch]++;
+    }
+    for(int i=0;i<freq.length;i++){
+        if(freq[i]>0){
+            System.out.println((char)i +" : "+freq[i]);
+        }
+    }
+}
+
 public static void main (String args[]) {
-    countUppLow("VInayak");
+    countSpace("shi vam is b usy with hi  s stud ies");
 }
 
 
