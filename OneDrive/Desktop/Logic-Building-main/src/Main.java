@@ -2196,8 +2196,20 @@ public static void countSpace(String str){
     }
     System.out.println("Count : "+count);
 }
+// Count how many times a given character appears in a string----------->
+public static void countChar(String str,char ch){
+    str = str.toLowerCase();
+    int count=0;
+    for(int i=0;i<str.length();i++){
+        char newCh = str.charAt(i);
+        if(newCh==ch){
+            count++;
+        }
+    }
+    System.out.println("Count : "+count);
+}
 public static void main (String args[]) {
-    countSpace("shi vam is b usy with hi  s stud ies");
+    countChar("shivsss iiiamsingh",'i');
 }
 
 
