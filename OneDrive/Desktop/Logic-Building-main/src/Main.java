@@ -2208,8 +2208,30 @@ public static void countChar(String str,char ch){
     }
     System.out.println("Count : "+count);
 }
+//How many alphabets are before m and after m in a given string------------>
+public static void countAlpha(String str,char ch){
+    int befCount=0 , aftCount=0;
+    for(int i=0;i<str.length();i++){
+        char ch1 = str.charAt(i);
+        if(ch1==ch){
+            break;
+        }else{
+            befCount++;
+        }
+    }
+    for(int i=str.length()-1;i>0;i--){
+        char ch1 = str.charAt(i);
+        if(ch1==ch){
+            break;
+        }else{
+            aftCount++;
+        }
+    }
+    System.out.println("Count before char : "+befCount);
+    System.out.println("Count after char : "+aftCount);
+}
 public static void main (String args[]) {
-    countChar("shivsss iiiamsingh",'i');
+    countAlpha("computer",'k');
 }
 
 
