@@ -2230,8 +2230,20 @@ public static void countAlpha(String str,char ch){
     System.out.println("Count before char : "+befCount);
     System.out.println("Count after char : "+aftCount);
 }
+// Count substrings that start and end with the same character------>
+public static void substringCount(String str){
+    int count = 0;
+    for (int i = 0; i < str.length(); i++) {
+        for (int j = i; j < str.length(); j++) {
+            if (str.charAt(i) == str.charAt(j)) {
+                count++;
+            }
+        }
+    }
+    System.out.println(count);
+}
 public static void main (String args[]) {
-    countAlpha("computer",'k');
+    substringCount("comm");
 }
 
 
