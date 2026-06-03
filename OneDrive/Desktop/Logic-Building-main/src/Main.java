@@ -2242,8 +2242,26 @@ public static void substringCount(String str){
     }
     System.out.println(count);
 }
+// Count the words start with vowel in sentence--------------->
+public static void vowelWord(String str){
+    str = str.toLowerCase();
+    int count = 0;
+    String[] words = str.split(" ");
+    for(int i=0;i<words.length;i++){
+       if(words[i].length()>0) {
+           char ch = words[i].charAt(0);
+           if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+               count++;
+           }
+       }
+    }
+    for(String el:words){
+        System.out.print(el+",");
+    }
+    System.out.println(count);
+}
 public static void main (String args[]) {
-    substringCount("comm");
+    vowelWord("shivam is good boy as");
 }
 
 
