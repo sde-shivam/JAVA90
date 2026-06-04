@@ -2260,8 +2260,22 @@ public static void vowelWord(String str){
     }
     System.out.println(count);
 }
+// Count how many words end with 's' in given String----------------->
+public static void endWithS(String str){
+    str = str.toLowerCase();
+    int count = 0;
+    String[] words = str.split(" ");
+    for(int i=0;i<words.length;i++) {
+            String str1 = words[i];
+            char ch = str1.charAt(str1.length()-1);
+            if(words[i].length() > 0 && ch=='s'){
+                count++;
+        }
+    }
+    System.out.println(count);
+}
 public static void main (String args[]) {
-    vowelWord("shivam is good boy as");
+    endWithS("shivam is good boy as suhas");
 }
 
 
