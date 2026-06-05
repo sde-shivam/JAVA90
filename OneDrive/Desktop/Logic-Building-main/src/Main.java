@@ -2274,8 +2274,18 @@ public static void endWithS(String str){
     }
     System.out.println(count);
 }
+// Reverse a string (without using built-in method)------>
+public static void reverseStr(String str){
+    String rev = "";
+    for(int i=str.length()-1;i>=0;i--){
+         char ch = str.charAt(i);
+         rev +=ch;
+
+    }
+    System.out.println(rev);
+}
 public static void main (String args[]) {
-    endWithS("shivam is good boy as suhas");
+    reverseStr("shivam");
 }
 
 
