@@ -2284,8 +2284,20 @@ public static void reverseStr(String str){
     }
     System.out.println(rev);
 }
+// Reverse Each Word in sentence------------------->
+public static void reverseWord(String str) {
+    String rev = "";
+    String[] eachWord = str.split(" ");
+    for(int i=0;i<eachWord.length;i++) {
+        String word = eachWord[i];
+        for(int j=word.length()-1;j>=0;j--){
+            rev +=word.charAt(j);
+        }
+    }
+    System.out.println(rev);
+}
 public static void main (String args[]) {
-    reverseStr("shivam");
+    reverseWord("shivam is boy");
 }
 
 
