@@ -2293,11 +2293,23 @@ public static void reverseWord(String str) {
         for(int j=word.length()-1;j>=0;j--){
             rev +=word.charAt(j);
         }
+        rev+=" ";
     }
     System.out.println(rev);
 }
+//Reverse the order of words in sentence---------------->
+public static void reverseOrdWord(String str) {
+    String rev = "";
+    String[] eachWord = str.split(" ");
+    for(int i=eachWord.length-1;i>=0;i--) {
+            rev +=eachWord[i];
+            rev+=" ";
+        }
+    System.out.println(rev);
+}
+
 public static void main (String args[]) {
-    reverseWord("shivam is boy");
+    reverseOrdWord("shivam is good boy");
 }
 
 
