@@ -2309,6 +2309,7 @@ public static void reverseOrdWord(String str) {
 }
 // Check string is palindrome or not--------------------->
 public static void checkPalindrome(String str){
+    str = str.toLowerCase();
     String rev ="";
     for(int i=str.length()-1;i>=0;i--){
         rev+=str.charAt(i);
@@ -2319,8 +2320,26 @@ public static void checkPalindrome(String str){
         System.out.println("String is not a Palindrome");
     }
 }
+// Check if two strings are reverse of each other-------------->
+public static void revString(String s1,String s2){
+    s1 = s1.toLowerCase();
+    s2 = s2.toLowerCase();
+    if(s1.length()==s2.length()) {
+        String rev = "";
+        for (int i = s2.length() - 1; i >= 0; i--) {
+            rev += s2.charAt(i);
+        }
+        if (s1.equals(rev)) {
+            System.out.println("String are reverse of each other");
+        } else {
+            System.out.println("String are not reverse of each other");
+        }
+    }else {
+        System.out.println("String are not reverse of each other");
+    }
+}
 public static void main (String args[]) {
-    checkPalindrome("mada");
+    revString("mavihs","shivam");
 }
 
 
