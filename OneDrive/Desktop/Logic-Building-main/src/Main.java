@@ -2307,9 +2307,20 @@ public static void reverseOrdWord(String str) {
         }
     System.out.println(rev);
 }
-
+// Check string is palindrome or not--------------------->
+public static void checkPalindrome(String str){
+    String rev ="";
+    for(int i=str.length()-1;i>=0;i--){
+        rev+=str.charAt(i);
+    }
+    if(str.equals(rev)){
+        System.out.println("String is Palindrome");
+    }else{
+        System.out.println("String is not a Palindrome");
+    }
+}
 public static void main (String args[]) {
-    reverseOrdWord("shivam is good boy");
+    checkPalindrome("mada");
 }
 
 
