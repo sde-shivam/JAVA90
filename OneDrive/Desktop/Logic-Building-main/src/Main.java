@@ -2338,8 +2338,18 @@ public static void revString(String s1,String s2){
         System.out.println("String are not reverse of each other");
     }
 }
+// Find middle character of a string ------------------->
+public static void midChar(String str){
+    if(str.length()%2==0){
+        String st = str.substring(str.length()/2-1,str.length()/2+1);
+        System.out.println(st);
+    }else{
+        char ch = str.charAt(str.length()/2);
+        System.out.println(ch);
+    }
+}
 public static void main (String args[]) {
-    revString("mavihs","shivam");
+    midChar("shiva");
 }
 
 
