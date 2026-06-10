@@ -2357,8 +2357,16 @@ public static void secHalfOfStr(String str){
     }
     System.out.println(rev);
 }
+// Remove the first and last character and Print remaining String------------>
+public static void remStr(String str){
+    String newStr = "";
+    for(int i=1;i<str.length()-1;i++){
+        newStr += str.charAt(i);
+    }
+    System.out.println(newStr);
+}
 public static void main (String args[]) {
-    secHalfOfStr("shivams");
+    remStr("shivam");
 }
 
 
