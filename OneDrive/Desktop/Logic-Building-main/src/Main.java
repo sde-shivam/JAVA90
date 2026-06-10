@@ -2348,8 +2348,17 @@ public static void midChar(String str){
         System.out.println(ch);
     }
 }
+// Print the second half of the string reverse----------------->
+public static void secHalfOfStr(String str){
+    String rev = "";
+    String newStr = str.substring(str.length()/2);
+    for(int i=newStr.length()-1;i>=0;i--){
+        rev+= newStr.charAt(i);
+    }
+    System.out.println(rev);
+}
 public static void main (String args[]) {
-    midChar("shiva");
+    secHalfOfStr("shivams");
 }
 
 
