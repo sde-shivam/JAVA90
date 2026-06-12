@@ -2385,8 +2385,19 @@ public static void charRev(String str) {
             }
             System.out.println(new String(arr));
         }
+ //Reverse String but skip spaces------------------->
+ public static void skipSpace(String str) {
+     String rev = "";
+     for(int i=str.length()-1;i>=0;i--){
+         char ch = str.charAt(i);
+         if(ch!=' '){
+            rev+=ch;
+         }
+         }
+     System.out.println(rev);
+     }
 public static void main (String args[]) {
-    charRev("s1h2i3v4a5m");
+    skipSpace("s_h   i   v a m");
 }
 
 
