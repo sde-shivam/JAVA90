@@ -2410,8 +2410,20 @@ public static void charRev(String str) {
      }
      System.out.println(newStr);
  }
+ // Calculate the LCM--------------------->
+ public static void calLcm(int a,int b){
+    int max = Math.max(a,b);
+    while(true){
+        if(max%a==0 && max%b==0){
+            System.out.println(max);
+            return;
+        }else{
+            max++;
+        }
+    }
+ }
 public static void main (String args[]) {
-    removeVowels("shiveousdgam");
+    calLcm(18,10);
 }
 
 
