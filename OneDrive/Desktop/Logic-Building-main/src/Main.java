@@ -2422,8 +2422,20 @@ public static void charRev(String str) {
         }
     }
  }
+ // Calculate the HCF/GCD----------------->
+public static void calGcd(int a,int b){
+    int min = Math.min(a,b);
+    while(min>0) {
+        if (a % min == 0 && b % min == 0) {
+            System.out.println(min);
+            return;
+        } else {
+            min--;
+        }
+    }
+}
 public static void main (String args[]) {
-    calLcm(18,10);
+    calGcd(20,10);
 }
 
 
