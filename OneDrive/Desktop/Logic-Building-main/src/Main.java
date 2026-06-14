@@ -2434,8 +2434,22 @@ public static void calGcd(int a,int b){
         }
     }
 }
+// Remove spaces from the String------------------>
+public static void removeSpace(String str){
+    str = str.toLowerCase();
+    String newStr = "";
+    for (int i = 0; i < str.length(); i++) {
+        char ch = str.charAt(i);
+        if(ch==' '){
+            continue;
+        }else{
+            newStr += ch;
+        }
+    }
+    System.out.println(newStr);
+}
 public static void main (String args[]) {
-    calGcd(20,10);
+    removeSpace("s            h  i       v  a    m");
 }
 
 
