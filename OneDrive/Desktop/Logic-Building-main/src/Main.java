@@ -2448,7 +2448,7 @@ public static void removeSpace(String str){
     }
     System.out.println(newStr);
 }
-//
+// Replace vowels with star ------------------------>
 public static void replaceVowelStar(String str) {
     str = str.toLowerCase();
     String newStr = "";
@@ -2462,8 +2462,21 @@ public static void replaceVowelStar(String str) {
     }
     System.out.println(newStr);
 }
+// Replace all spaces with "_"--------------------->
+public static void replaceSpace(String str) {
+    String newStr = "";
+    for (int i = 0; i < str.length(); i++) {
+        char ch = str.charAt(i);
+        if (ch==' ') {
+            newStr +='_';
+        }else{
+            newStr += ch;
+        }
+    }
+    System.out.println(newStr);
+}
 public static void main (String args[]) {
-    replaceVowel("shivamue");
+    replaceSpace("s h i v a m");
 }
 
 
