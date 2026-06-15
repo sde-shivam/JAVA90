@@ -2475,8 +2475,21 @@ public static void replaceSpace(String str) {
     }
     System.out.println(newStr);
 }
+// Remove Digit and print the rest String ------------->
+public static void removeDigit(String str) {
+    String newStr = "";
+    for (int i = 0; i < str.length(); i++) {
+        char ch = str.charAt(i);
+        if (Character.isDigit(ch)) {
+            continue;
+        }else{
+            newStr += ch;
+        }
+    }
+    System.out.println(newStr);
+}
 public static void main (String args[]) {
-    replaceSpace("s h i v a m");
+    removeDigit("s86h36i69va233m");
 }
 
 
