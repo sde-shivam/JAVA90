@@ -2488,8 +2488,23 @@ public static void removeDigit(String str) {
     }
     System.out.println(newStr);
 }
+// Remove Duplicate character from string-------------------->
+public static String removeDuplicate(String str) {
+    Set<Character> newSet = new LinkedHashSet<>();
+     for(char ch : str.toCharArray()){
+        if (Character.isLetter(ch)) {
+            newSet.add(ch);
+        }
+      }
+    StringBuilder sb = new StringBuilder();
+    for(char ch : newSet){
+        sb.append(ch);
+    }
+    return sb.toString();
+    }
 public static void main (String args[]) {
-    removeDigit("s86h36i69va233m");
+    String res = removeDuplicate("sshhiivvaamm");
+    System.out.println(res);
 }
 
 
