@@ -2502,9 +2502,23 @@ public static String removeDuplicate(String str) {
     }
     return sb.toString();
     }
+ // First non-repeating character in a string --------------->
+ public static void nonRepeating(String str){
+    for(int i=0;i<str.length();i++){
+        int count=0;
+       for(int j=0;j<str.length();j++){
+           if(str.charAt(i)==str.charAt(j)){
+               count++;
+           }
+       }
+       if(count==1){
+           System.out.print(str.charAt(i));
+           break;
+       }
+    }
+ }
 public static void main (String args[]) {
-    String res = removeDuplicate("sshhiivvaamm");
-    System.out.println(res);
+    nonRepeating("shiisvhvaam");
 }
 
 
