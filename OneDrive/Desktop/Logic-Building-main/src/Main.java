@@ -2517,8 +2517,24 @@ public static String removeDuplicate(String str) {
        }
     }
  }
+ // First occurance of the each character---------->
+public static void firstOccurance(String str){
+    for(int i=0;i<str.length();i++){
+        char ch = str.charAt(i);
+        boolean isAppeard = false;
+        for(int j=0;j<i;j++){
+            if(str.charAt(j)==ch){
+                isAppeard=true;
+                break;
+            }
+        }
+        if(!isAppeard){
+            System.out.print(str.charAt(i));
+        }
+    }
+}
 public static void main (String args[]) {
-    nonRepeating("shiisvhvaam");
+    firstOccurance("shiivhvaamm");
 }
 
 
