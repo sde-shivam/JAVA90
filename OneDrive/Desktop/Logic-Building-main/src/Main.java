@@ -2543,8 +2543,35 @@ public static void remConOccurance(String str){
       }
     System.out.print(newStr);
     }
+//Swap case uppercase to lowercase viseversa------------>
+public static void swapCase(){
+    Scanner scn = new Scanner(System.in);
+    System.out.print("Enter the String : ");
+    String str = scn.nextLine();
+        System.out.println();
+        System.out.print("Enter 1 for Uppercase : ");
+        System.out.print("Enter 2 for Lowercase : ");
+        System.out.print("Enter 0 for Exit : ");
+        int input = scn.nextInt();
+        System.out.println();
+        switch (input) {
+            case 1:
+                System.out.println(str.toUpperCase());
+                break;
+            case 2:
+                System.out.println(str.toLowerCase());
+                break;
+            case 0:
+                System.out.println("Exit...");
+                System.exit(0);
+                break;
+            default:
+                System.out.println("Entered invalid key");
+        }
+        System.out.println();
+}
 public static void main (String args[]) {
-    remConOccurance("ssshhiivaamm");
+    swapCase();
 }
 
 
