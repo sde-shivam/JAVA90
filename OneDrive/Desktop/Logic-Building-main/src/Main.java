@@ -2533,8 +2533,18 @@ public static void firstOccurance(String str){
         }
     }
 }
+//Remove consecutive duplicate character---------------->
+public static void remConOccurance(String str){
+    String newStr="";
+    for(int i=0;i<str.length();i++) {
+        if(i==0||str.charAt(i)!=str.charAt(i-1)){
+            newStr+=str.charAt(i);
+        }
+      }
+    System.out.print(newStr);
+    }
 public static void main (String args[]) {
-    firstOccurance("shiivhvaamm");
+    remConOccurance("ssshhiivaamm");
 }
 
 
