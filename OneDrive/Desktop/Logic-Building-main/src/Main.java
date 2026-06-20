@@ -2586,6 +2586,23 @@ public static boolean palindrome(int num){
     }
     return true;
 }
+// Contains Duplicate in Array----------------->
+public boolean containsDuplicate(int[] nums) {
+    Map<Integer,Integer> map = new HashMap<>();
+    boolean isDuplicate = false;
+    for(int i=0;i<nums.length;i++){
+        if(map.containsKey(nums[i])){
+            isDuplicate =true;
+        }else{
+            map.put(nums[i],1);
+        }
+    }
+    if(isDuplicate){
+        return true;
+    }else{
+        return false;
+    }
+}
 public static void main (String args[]) {
     swapCase();
 }
