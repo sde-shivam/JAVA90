@@ -2603,6 +2603,18 @@ public boolean containsDuplicate(int[] nums) {
         return false;
     }
 }
+// Richest customer wealth---------------->
+public int maximumWealth(int[][] accounts) {
+    int max = Integer.MIN_VALUE;
+    for(int[] account:accounts){
+        int sum=0;
+        for(int el:account){
+            sum+=el;
+        }
+        max = Math.max(max,sum);
+    }
+    return max;
+}
 public static void main (String args[]) {
     swapCase();
 }
