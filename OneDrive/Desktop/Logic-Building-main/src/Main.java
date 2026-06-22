@@ -2629,6 +2629,17 @@ public int[] smallerNumbersThanCurrent(int[] nums) {
     }
     return arr;
 }
+// Remove element (val) from array and return the same array-------------->
+public int removeElement(int[] nums, int val) {
+    int k=0;
+    for(int i=0;i<nums.length;i++){
+        if(nums[i]!=val){
+            nums[k]=nums[i];
+            k++;
+        }
+    }
+    return k;
+}
 public static void main (String args[]) {
     swapCase();
 }
