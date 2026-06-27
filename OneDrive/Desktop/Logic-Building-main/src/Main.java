@@ -2721,6 +2721,22 @@ public int countKDifference(int[] nums, int k) {
     }
     return count;
 }
+//kids With Candies problem-------------------->
+public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
+    List<Boolean> list = new ArrayList<>();
+    int max = Integer.MIN_VALUE;
+    for(int i=0;i<candies.length;i++){
+        max = Math.max(candies[i],max);
+    }
+    for(int candy:candies){
+        if(candy + extraCandies >= max){
+            list.add(true);
+        }else{
+            list.add(false);
+        }
+    }
+    return list;
+}
 public static void main (String args[]) {
     swapCase();
 }
