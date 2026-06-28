@@ -2737,6 +2737,24 @@ public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
     }
     return list;
 }
+//single Number in array----------------->
+public int singleNumber(int[] nums) {
+    int single=0;
+    Map<Integer,Integer> map = new HashMap<>();
+    for(int num:nums){
+        if(map.containsKey(num)){
+            map.put(num,map.get(num)+1);
+        }else{
+            map.put(num,1);
+        }
+    }
+    for(int el:map.keySet()){
+        if(map.get(el)==1){
+            single = el;
+        }
+    }
+    return single;
+}
 public static void main (String args[]) {
     swapCase();
 }
