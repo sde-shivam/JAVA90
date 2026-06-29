@@ -2775,6 +2775,15 @@ public int majorityElement(int[] nums) {
     }
     return resultEl;
 }
+//Missing number------------------------->
+public int missingNum(int[] nums) {
+    int actualSum= (nums.length)*(nums.length+1)/2;
+    int originalSum = 0;
+    for(int num:nums){
+        originalSum+=num;
+    }
+    return actualSum - originalSum;
+}
 public static void main (String args[]) {
     swapCase();
 }
