@@ -2755,6 +2755,26 @@ public int singleNumber(int[] nums) {
     }
     return single;
 }
+// Majority element in a array------------------->
+public int majorityElement(int[] nums) {
+    Map<Integer,Integer> map =new HashMap<>();
+    for(int num:nums){
+        if(map.containsKey(num)){
+            map.put(num,map.get(num)+1);
+        }else{
+            map.put(num,1);
+        }
+    }
+    int max =0;
+    int resultEl=0;
+    for(int el:map.keySet()){
+        if(map.get(el)>max){
+            max =map.get(el);
+            resultEl = el;
+        }
+    }
+    return resultEl;
+}
 public static void main (String args[]) {
     swapCase();
 }
