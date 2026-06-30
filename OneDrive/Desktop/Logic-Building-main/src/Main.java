@@ -2794,8 +2794,16 @@ public static void shiftChar(String str){
     }
     System.out.print(newStr);
 }
+//Print a each word of a sentence on a new line----------------------->
+public static void printWord(String str) {
+        String[] newStr = str.split(" ");
+    for (int i = 0; i < newStr.length; i++) {
+        System.out.println(newStr[i]);
+    }
+}
+
 public static void main (String args[]) {
-    shiftChar("shivam");
+    evenLengthWord("shivam is not good");
 }
 
 
