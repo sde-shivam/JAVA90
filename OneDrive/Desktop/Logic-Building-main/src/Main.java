@@ -2814,8 +2814,19 @@ public static void evenLengthWord(String str) {
     System.out.println();
     System.out.println("Count : " +count);
 }
+// Find the longest word in a sentence------------->
+public static void longestWord(String str){
+    String[] newStr = str.split(" ");
+    String longestStr = "";
+    for (int i = 0; i < newStr.length; i++) {
+        if(longestStr.length()<newStr[i].length()){
+            longestStr = newStr[i];
+        }
+    }
+    System.out.print(longestStr);
+    }
 public static void main (String args[]) {
-    evenLengthWord("shivam is not good");
+    longestWord("shi isp not goo");
 }
 
 
