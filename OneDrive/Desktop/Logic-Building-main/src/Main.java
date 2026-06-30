@@ -2817,7 +2817,7 @@ public static void evenLengthWord(String str) {
 // Find the longest word in a sentence------------->
 public static void longestWord(String str){
     String[] newStr = str.split(" ");
-    String longestStr = "";
+    String longestStr = newStr[0];
     for (int i = 0; i < newStr.length; i++) {
         if(longestStr.length()<newStr[i].length()){
             longestStr = newStr[i];
@@ -2825,8 +2825,20 @@ public static void longestWord(String str){
     }
     System.out.print(longestStr);
     }
+// Find the shortest word in a sentence-------------->
+public static void shortestWord(String str){
+    String[] newStr = str.split(" ");
+    String shortestStr = newStr[0];
+    for (int i = 0; i < newStr.length; i++) {
+        if(shortestStr.length()>newStr[i].length()){
+            shortestStr = newStr[i];
+        }
+    }
+    System.out.print(shortestStr);
+}
+
 public static void main (String args[]) {
-    longestWord("shi isp not goo");
+    longestWord("name is shivam singh");
 }
 
 
