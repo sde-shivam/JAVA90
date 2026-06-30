@@ -2784,8 +2784,18 @@ public int missingNum(int[] nums) {
     }
     return actualSum - originalSum;
 }
+//Shift each character by 1----------------->
+public static void shiftChar(String str){
+   String newStr ="";
+    for(int i=0;i<str.length();i++){
+        char ch = str.charAt(i);
+        ch++;
+        newStr += ch;
+    }
+    System.out.print(newStr);
+}
 public static void main (String args[]) {
-    swapCase();
+    shiftChar("shivam");
 }
 
 
