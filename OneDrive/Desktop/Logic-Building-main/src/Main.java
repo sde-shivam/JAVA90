@@ -2801,7 +2801,19 @@ public static void printWord(String str) {
         System.out.println(newStr[i]);
     }
 }
-
+// Count how many word have even length----------->
+public static void evenLengthWord(String str) {
+    int count=0;
+    String[] newStr = str.split(" ");
+    for (int i = 0; i < newStr.length; i++) {
+        if(newStr[i].length() % 2==0){
+            count++;
+            System.out.print(newStr[i]+",");
+        }
+    }
+    System.out.println();
+    System.out.println("Count : " +count);
+}
 public static void main (String args[]) {
     evenLengthWord("shivam is not good");
 }
