@@ -2836,7 +2836,20 @@ public static void shortestWord(String str){
     }
     System.out.print(shortestStr);
 }
-
+//Find Max Consecutive Ones----------------------->
+public int findMaxConsecutiveOnes(int[] nums) {
+    int count =0;
+    int max =0;
+    for(int i=0;i<nums.length;i++){
+        if(nums[i]==1){
+            count++;
+            max = Math.max(count,max);
+        }else{
+            count=0;
+        }
+    }
+    return max;
+}
 public static void main (String args[]) {
     longestWord("name is shivam singh");
 }
