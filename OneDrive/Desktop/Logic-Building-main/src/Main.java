@@ -2850,6 +2850,16 @@ public int findMaxConsecutiveOnes(int[] nums) {
     }
     return max;
 }
+//Length Of LastWord in String------------------------->
+public int lengthOfLastWord(String s) {
+    s = s.trim();
+    String[] str = s.split(" ");
+    String lastStr = "";
+    for(int i=0;i<str.length;i++){
+        lastStr = str[str.length-1];
+    }
+    return lastStr.length();
+}
 public static void main (String args[]) {
     longestWord("name is shivam singh");
 }
