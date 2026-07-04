@@ -2876,15 +2876,18 @@ public List<String> fizzBuzz(int n) {
     }
     return list;
 }
-//
-public static void evenLengthWord(String str) {
+// Word with even length in a string----------->
+public static void evenLenWord(String str) {
     int count = 0;
     String[] newStr = str.split(" ");
     for (int i = 0; i < newStr.length; i++) {
         if (newStr[i].length() % 2 == 0) {
+            System.out.print(newStr[i]+",");
             count++;
         }
     }
+    System.out.println();
+    System.out.print(count);
 }
 
 //sum Of Unique elements in array------------------>
@@ -2906,7 +2909,7 @@ public int sumOfUnique(int[] nums) {
     return sum;
 }
 public static void main (String args[]) {
-    longestWord("name is shivam singh");
+    evenLenWord("name is shivam singh he is not good");
 }
 
 
