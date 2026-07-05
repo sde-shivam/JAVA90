@@ -2936,6 +2936,17 @@ public int[] productExceptSelf(int[] nums) {
     }
     return newArr;
 }
+//square Is White or black---------------------------->
+public boolean squareIsWhite(String coordinates) {
+    char ch = coordinates.charAt(0);
+    char ch1= coordinates.charAt(1);
+    for(int i=1;i<5;i++){
+        if(((ch=='a'||ch=='c'||ch=='e'||ch=='g')&&((ch1-'0')==2*i-1))||((ch=='b'||ch=='d'||ch=='f'||ch=='h')&&((ch1-'0')==2*i))){
+            return false;
+        }
+    }
+    return true;
+}
 public static void main (String args[]) {
     evenLenWord("name is shivam singh he is not good");
 }
