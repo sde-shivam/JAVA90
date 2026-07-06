@@ -2947,6 +2947,26 @@ public boolean squareIsWhite(String coordinates) {
     }
     return true;
 }
+//maximum Number replacing 6,9 from number-------->
+public int maximum69Number (int num) {
+    String str = Integer.toString(num);
+    int[] arr = new int[str.length()];
+    for(int i=0;i<str.length();i++){
+        arr[i]=str.charAt(i)-'0';
+    }
+
+    for(int i=0;i<arr.length;i++){
+        if(arr[i]==6){
+            arr[i]=9;
+            break;
+        }
+    }
+    StringBuilder sb = new StringBuilder();
+    for (int el : arr) {
+        sb.append(el);
+    }
+    return Integer.parseInt(sb.toString());
+}
 public static void main (String args[]) {
     evenLenWord("name is shivam singh he is not good");
 }
