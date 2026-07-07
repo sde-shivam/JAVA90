@@ -2967,8 +2967,19 @@ public int maximum69Number (int num) {
     }
     return Integer.parseInt(sb.toString());
 }
+//Swap the last and first word in a given string------->
+public static void swapWord(String str){
+    str = str.trim();
+    String[] arr = str.split(" ");
+        String temp = arr[0];
+        arr[0]= arr[arr.length-1];
+        arr[arr.length-1] =temp;
+      for(String el:arr){
+        System.out.print(el+" ");
+      }
+    }
 public static void main (String args[]) {
-    evenLenWord("name is shivam singh he is not good");
+    swapWord("name is shivam singh he is not good");
 }
 
 
