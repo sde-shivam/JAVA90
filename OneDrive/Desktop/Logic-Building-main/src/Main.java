@@ -2988,9 +2988,22 @@ public static void swapWord(String str){
             }
         }
     }
+// Wors which Contains character 'A' --------------->
+public static void containCharA(String str) {
+    str = str.trim();
+    int count=0;
+    String[] arr = str.split(" ");
+    for (int i = 0; i < arr.length; i++) {
+        if(arr[i].contains("a")){
+            System.out.print(arr[i]+" ");
+        }
+    }
+    System.out.println();
+    System.out.print("Count : "+count);
+}
 
 public static void main (String args[]) {
-    startEndWith("name is shivas singh he is not goog");
+    containCharA("name is shivas singh he is not goog");
 }
 
 
