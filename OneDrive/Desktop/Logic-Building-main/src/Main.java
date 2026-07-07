@@ -2978,8 +2978,19 @@ public static void swapWord(String str){
         System.out.print(el+" ");
       }
     }
+// Words which are Start and End with the same character-------->
+    public static void startEndWith(String str) {
+        str = str.trim();
+        String[] arr = str.split(" ");
+        for(int i=0;i<arr.length;i++){
+            if(arr[i].charAt(0)==arr[i].charAt(arr[i].length()-1)){
+                System.out.print(arr[i]+" ");
+            }
+        }
+    }
+
 public static void main (String args[]) {
-    swapWord("name is shivam singh he is not good");
+    startEndWith("name is shivas singh he is not goog");
 }
 
 
