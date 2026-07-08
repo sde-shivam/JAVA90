@@ -3025,6 +3025,21 @@ public int numberOfSteps(int num) {
     }
     return count;
 }
+// Check if number is Power Of Two or not --------->
+public boolean isPowerOfTwo(int n) {
+    double pow=0;
+    boolean isPowerOfTwo = false;
+    for(int i=0;i<32;i++){
+        double currentVal = Math.pow(2,pow);
+        if(currentVal==n){
+            isPowerOfTwo = true;
+            break;
+        }else{
+            pow++;
+        }
+    }
+    return isPowerOfTwo;
+}
 public static void main (String args[]) {
     capitalizeFirstLetter("name is shivas singh he is not goog");
 }
