@@ -2988,7 +2988,7 @@ public static void swapWord(String str){
             }
         }
     }
-// Wors which Contains character 'A' --------------->
+// Word which Contains character 'A' --------------->
 public static void containCharA(String str) {
     str = str.trim();
     int count=0;
@@ -2996,14 +2996,24 @@ public static void containCharA(String str) {
     for (int i = 0; i < arr.length; i++) {
         if(arr[i].contains("a")){
             System.out.print(arr[i]+" ");
+            count++;
         }
     }
     System.out.println();
     System.out.print("Count : "+count);
 }
+//Capitalize First Letter------------------------------->
+public static void capitalizeFirstLetter(String str) {
+     str = str.trim();
+     String[] arr = str.split(" ");
+    for (int i = 1; i < arr.length; i++) {
+           String newStr = arr[i].substring(0,1).toUpperCase();
+           System.out.print(newStr+arr[i].substring(1) + " ");
+        }
+    }
 
 public static void main (String args[]) {
-    containCharA("name is shivas singh he is not goog");
+    capitalizeFirstLetter("name is shivas singh he is not goog");
 }
 
 
