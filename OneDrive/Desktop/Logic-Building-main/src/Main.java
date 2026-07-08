@@ -3011,7 +3011,20 @@ public static void capitalizeFirstLetter(String str) {
            System.out.print(newStr+arr[i].substring(1) + " ");
         }
     }
-
+//Count The Number Of Steps------------------------>
+public int numberOfSteps(int num) {
+    int count=0;
+    while(num>0){
+        if(num%2==0){
+            count++;
+            num=num/2;
+        }else{
+            count++;
+            num=num-1;
+        }
+    }
+    return count;
+}
 public static void main (String args[]) {
     capitalizeFirstLetter("name is shivas singh he is not goog");
 }
