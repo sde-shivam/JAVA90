@@ -3040,6 +3040,19 @@ public boolean isPowerOfTwo(int n) {
     }
     return isPowerOfTwo;
 }
+//Add digits to make a single digit --------------->
+public int addDigits(int num) {
+    if(num<10){
+        return num;
+    }
+    int sum=0;
+    while(num>0){
+        int digit = num%10;
+        sum+=digit;
+        num=num/10;
+    }
+    return addDigits(sum);
+}
 public static void main (String args[]) {
     capitalizeFirstLetter("name is shivas singh he is not goog");
 }
