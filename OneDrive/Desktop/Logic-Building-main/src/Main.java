@@ -3070,7 +3070,22 @@ public boolean isHappy(int n) {
         n=sum;
     }
     return true;
-
+}
+// n is Power Of Three or not----------------->
+public boolean isPowerOfThree(int n) {
+    if(n<=0){
+        return false;
+    }
+    if(n==1){
+        return true;
+    }
+    for(int i=1;i<31;i++){
+        double powerOf3 = Math.pow(3,i);
+        if(n==powerOf3){
+            return true;
+        }
+    }
+    return false;
 }
 public static void main (String args[]) {
     capitalizeFirstLetter("name is shivas singh he is not goog");
