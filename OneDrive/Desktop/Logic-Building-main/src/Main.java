@@ -3103,8 +3103,17 @@ public boolean isUgly(int n) {
     }
     return n==1;
 }
+// Remove the extra space between the words--------------->
+public static void removeExtraSpace(String str){
+    String[] newStr = str.trim().split(" ");
+    for(int i=0;i<newStr.length;i++){
+        if(!newStr[i].isEmpty()){
+            System.out.print(newStr[i]+" ");
+        }
+    }
+}
 public static void main (String args[]) {
-    capitalizeFirstLetter("name is shivas singh he is not goog");
+    removeExtraSpace("name   is   shivas   singh  he is not goog");
 }
 
 
