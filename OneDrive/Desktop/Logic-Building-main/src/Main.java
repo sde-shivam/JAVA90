@@ -3111,7 +3111,28 @@ public static void removeExtraSpace(String str){
             System.out.print(newStr[i]+" ");
         }
     }
-}
+ }
+ //Count prime numbers till n------------------>
+ public int countPrimes(int n) {
+     int count = 0;
+     if (n <= 1) {
+         return 0;
+     }
+     for (int i = 2; i < n; i++) {
+         boolean isPrime = true;
+         for (int j = 2; j <= Math.sqrt(i); j++) {
+             if (i % j == 0) {
+                 isPrime = false;
+                 break;
+             }
+         }
+         if(isPrime){
+             count++;
+         }
+
+     }
+     return count;
+ }
 public static void main (String args[]) {
     removeExtraSpace("name   is   shivas   singh  he is not goog");
 }
