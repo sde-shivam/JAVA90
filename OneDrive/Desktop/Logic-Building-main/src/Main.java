@@ -3133,6 +3133,18 @@ public static void removeExtraSpace(String str){
      }
      return count;
  }
+ // Count the number of trailing Zeroes------------>
+ public int trailingZeroes(int n) {
+     int count=0;
+     for (int i = 5; i <= n; i += 5) {
+         int num = i;
+         while (num % 5 == 0) {
+             count++;
+             num /= 5;
+         }
+     }
+     return count;
+ }
 public static void main (String args[]) {
     removeExtraSpace("name   is   shivas   singh  he is not goog");
 }
