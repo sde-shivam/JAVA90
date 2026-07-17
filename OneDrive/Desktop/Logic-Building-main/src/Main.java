@@ -3145,6 +3145,14 @@ public static void removeExtraSpace(String str){
      }
      return count;
  }
+ // devide the integer------------------>
+ public int divide(int dividend, int divisor) {
+     if(dividend==Integer.MIN_VALUE && divisor==-1){
+         return Integer.MAX_VALUE;
+     }else{
+         return  dividend/divisor;
+     }
+ }
 public static void main (String args[]) {
     removeExtraSpace("name   is   shivas   singh  he is not goog");
 }
