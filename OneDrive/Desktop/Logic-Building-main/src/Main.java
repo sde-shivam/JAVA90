@@ -3165,6 +3165,22 @@ public static void removeExtraSpace(String str){
          right--;
      }
  }
+ //is Palindrome or not------------------->
+ public boolean isPalindrome(String s) {
+     s = s.toLowerCase();
+     String org = "";
+     String rev = "";
+     for (int i = 0; i < s.length(); i++) {
+         char ch = s.charAt(i);
+         if (Character.isLetterOrDigit(ch)) {
+             org += ch;
+         }
+     }
+     for (int i = org.length() - 1; i >= 0; i--) {
+         rev += org.charAt(i);
+     }
+     return org.equals(rev);
+ }
 public static void main (String args[]) {
     removeExtraSpace("name   is   shivas   singh  he is not goog");
 }
