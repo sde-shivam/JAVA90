@@ -3218,6 +3218,15 @@ public static int[] anagramStr(String big, String small) {
     }
     return result;
 }
+//Sum of even numbers recursive-------------------->
+public static int evenSumNum(int num){
+    int sum=0;
+    if(num==0) return sum;
+    if(num %2==0){
+        sum +=num;
+    }
+    return evenSum(num-1)+sum;
+}
 public static void main (String args[]) {
     removeExtraSpace("name   is   shivas   singh  he is not goog");
 }
