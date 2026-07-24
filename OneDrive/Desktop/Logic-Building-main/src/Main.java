@@ -3244,6 +3244,25 @@ public static int binarySrch(int numbers[], int key) {
     }
     return -1;
 }
+// Odd and Even numbers present in array----------------->
+public static void numberArray(int numbers[]) {
+    int even = 0;
+    int odd = 0;
+    int max = Integer.MIN_VALUE;
+    for (int i = 0; i < numbers.length; i++) {
+        if (numbers[i] % 2 == 0) {
+            ++even;
+        } else {
+            ++odd;
+        }
+        if (max < numbers[i]) {
+            max = numbers[i];
+        }
+    }
+    System.out.println("Even : " + even);
+    System.out.println("Odd : " + odd);
+    System.out.println("Max value : " + max);
+}
 public static void main (String args[]) {
     removeExtraSpace("name   is   shivas   singh  he is not goog");
 }
