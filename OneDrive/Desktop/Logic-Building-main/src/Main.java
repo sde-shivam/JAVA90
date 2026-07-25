@@ -3263,6 +3263,18 @@ public static void numberArray(int numbers[]) {
     System.out.println("Odd : " + odd);
     System.out.println("Max value : " + max);
 }
+// Count spaces in the sentance ----------------->
+public static void countSpc(String str){
+    str = str.toLowerCase();
+    int count=0;
+    for(int i=0;i<str.length();i++){
+        char ch = str.charAt(i);
+        if(Character.isSpace(ch)){
+            count++;
+        }
+    }
+    System.out.println("Count : "+count);
+}
 public static void main (String args[]) {
     removeExtraSpace("name   is   shivas   singh  he is not goog");
 }
