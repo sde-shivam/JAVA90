@@ -3275,6 +3275,18 @@ public static void countSpc(String str){
     }
     System.out.println("Count : "+count);
 }
+// Calculate the HCF/GCD----------------->
+public static void caHcf(int a,int b){
+    int min = Math.min(a,b);
+    while(min>0) {
+        if (a % min == 0 && b % min == 0) {
+            System.out.println(min);
+            return;
+        } else {
+            min--;
+        }
+    }
+}
 public static void main (String args[]) {
     removeExtraSpace("name   is   shivas   singh  he is not goog");
 }
