@@ -3287,6 +3287,20 @@ public static void caHcf(int a,int b){
         }
     }
 }
+// Merge 2 array into 3rd array----------------->
+public static void mergeArray(int[] arr1,int[] arr2){
+    int length = arr1.length+arr2.length;
+    int[] newArr = new int[length];
+    for(int i=0;i<arr1.length;i++){
+        newArr[i]=arr1[i];
+    }
+    for(int j=arr1.length;j<newArr.length;j++){ //we can use 2 variables j,k in loop also
+        newArr[j] = arr2[j-arr1.length];
+    }
+    for(int el: newArr){
+        System.out.print(el+",");
+    }
+}
 public static void main (String args[]) {
     removeExtraSpace("name   is   shivas   singh  he is not goog");
 }
