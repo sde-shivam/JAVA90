@@ -3301,6 +3301,21 @@ public static void mergeArray(int[] arr1,int[] arr2){
         System.out.print(el+",");
     }
 }
+//Reverse an array(2 pointer)----------------->
+public static void revArr(int numbers[]) {
+    for (int i = 0; i < numbers.length; i++) {
+        int start = 0;
+        int end = numbers.length - 1;
+        while (start < end) {
+            //swap ------>
+            int temp = numbers[end];
+            numbers[end] = numbers[start];
+            numbers[start] = temp;
+            start++;
+            end--;
+        }
+    }
+}
 public static void main (String args[]) {
     removeExtraSpace("name   is   shivas   singh  he is not goog");
 }
