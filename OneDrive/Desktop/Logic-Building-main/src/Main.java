@@ -3316,6 +3316,23 @@ public static void revArr(int numbers[]) {
         }
     }
 }
+//Move All Negative Numbers---------------->
+public static void moveNeg(int[] arr) {
+    int left = 0, right = arr.length - 1;
+    while (left <= right) {
+        if (arr[left] < 0) {
+            left++;
+        } else if (arr[right] >= 0) {
+            right--;
+        } else {
+            int temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp;
+            left++;
+            right--;
+        }
+    }
+}
 public static void main (String args[]) {
     removeExtraSpace("name   is   shivas   singh  he is not goog");
 }
