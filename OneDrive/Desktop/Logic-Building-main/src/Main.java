@@ -3333,6 +3333,20 @@ public static void moveNeg(int[] arr) {
         }
     }
 }
+//Count The Number Of Step------------------------>
+public int numberOfStep(int num) {
+    int count=0;
+    while(num>0){
+        if(num%2==0){
+            count++;
+            num=num/2;
+        }else{
+            count++;
+            num=num-1;
+        }
+    }
+    return count;
+}
 public static void main (String args[]) {
     removeExtraSpace("name   is   shivas   singh  he is not goog");
 }
