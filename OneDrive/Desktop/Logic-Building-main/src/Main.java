@@ -3366,6 +3366,20 @@ public static void grtrThanAvg(int[] num){
     System.out.println();
     System.out.print("Count :"+count);
 }
+// common elements beetween 2 array------------------>
+public static void commonElInArr(int[] arr1,int[] arr2){
+    List<Integer> list = new ArrayList<>();
+    for(int i=0;i<arr1.length;i++){
+        for(int j=0;j<arr2.length;j++){
+            if(arr1[i]==arr2[j]){
+                list.add(arr1[i]);
+            }
+        }
+    }
+    for(int el:list) {
+        System.out.print(el + ",");
+    }
+}
 public static void main (String args[]) {
     removeExtraSpace("name   is   shivas   singh  he is not goog");
 }
