@@ -3347,6 +3347,25 @@ public int numberOfStep(int num) {
     }
     return count;
 }
+//count the elements which are greater than avg of arr-------->
+public static void grtrThanAvg(int[] num){
+    int sum = 0;
+    int len = num.length;
+    int count =0;
+    for(int i=0;i<num.length;i++){
+        sum+=num[i];
+    }
+    int avg = sum/len;
+    System.out.println("Avg : "+avg);
+    for(int i=0;i<num.length;i++){
+        if(num[i]>avg){
+            System.out.print(num[i]+",");
+            count++;
+        }
+    }
+    System.out.println();
+    System.out.print("Count :"+count);
+}
 public static void main (String args[]) {
     removeExtraSpace("name   is   shivas   singh  he is not goog");
 }
