@@ -3380,6 +3380,22 @@ public static void commonElInArr(int[] arr1,int[] arr2){
         System.out.print(el + ",");
     }
 }
+// Replce every Even number with 1 and odd number with zero--------------->
+public static void repWithZeroAndOne(int[] num){
+    int[] newArr = new int[num.length];
+    for(int i=0;i<num.length;i++){
+        if(num[i]<1){
+            newArr[i]= -1;
+        }else if(num[i] % 2==0){
+            newArr[i] = 1;
+        }else{
+            newArr[i] = 0;
+        }
+    }
+    for(int el : newArr){
+        System.out.print(el+",");
+    }
+}
 public static void main (String args[]) {
     removeExtraSpace("name   is   shivas   singh  he is not goog");
 }
