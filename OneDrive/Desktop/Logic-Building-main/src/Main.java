@@ -3396,6 +3396,19 @@ public static void repWithZeroAndOne(int[] num){
         System.out.print(el+",");
     }
 }
+//Count how many element is perfect squre is array------------>
+public static void perfectSqInArr(int[] num){
+    int count = 0;
+    for(int i=0;i<num.length;i++){
+        int sqrt = (int)Math.sqrt(num[i]);
+        if( sqrt * sqrt== num[i]){
+            System.out.print(num[i]+",");
+            count++;
+        }
+    }
+    System.out.println();
+    System.out.print("count : "+count);
+}
 public static void main (String args[]) {
     removeExtraSpace("name   is   shivas   singh  he is not goog");
 }
