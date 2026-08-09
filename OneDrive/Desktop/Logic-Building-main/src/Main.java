@@ -3409,6 +3409,19 @@ public static void perfectSqInArr(int[] num){
     System.out.println();
     System.out.print("count : "+count);
 }
+// Remove Digit and print the rest String ------------->
+public static void remDigit(String str) {
+    String newStr = "";
+    for (int i = 0; i < str.length(); i++) {
+        char ch = str.charAt(i);
+        if (Character.isDigit(ch)) {
+            continue;
+        }else{
+            newStr += ch;
+        }
+    }
+    System.out.println(newStr);
+}
 public static void main (String args[]) {
     removeExtraSpace("name   is   shivas   singh  he is not goog");
 }
