@@ -3422,6 +3422,20 @@ public static void remDigit(String str) {
     }
     System.out.println(newStr);
 }
+// prime number from 1 - 100 ---------------->
+public static boolean primeNum(int num) {
+    boolean isPrime = true;
+    if (num <= 1) {
+        System.out.println("Invalid number");
+        isPrime = false;
+    }
+    for (int i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i == 0) {
+            isPrime = false;
+        }
+    }
+    return isPrime;
+}
 public static void main (String args[]) {
     removeExtraSpace("name   is   shivas   singh  he is not goog");
 }
