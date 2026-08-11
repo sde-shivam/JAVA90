@@ -3436,6 +3436,21 @@ public static boolean primeNum(int num) {
     }
     return isPrime;
 }
+// ARRAY IS SORTED IN ASCENDING ORDER--------------->
+public static void ascSort(int[] num){
+    for(int i=0;i<num.length;i++){
+        for(int j=i+1;j<num.length;j++){
+            if(num[i]>num[j]){
+                int temp = num[i];
+                num[i] = num[j];
+                num[j] = temp;
+            }
+        }
+    }
+    for(int el : num){
+        System.out.print(el);
+    }
+}
 public static void main (String args[]) {
     removeExtraSpace("name   is   shivas   singh  he is not goog");
 }
