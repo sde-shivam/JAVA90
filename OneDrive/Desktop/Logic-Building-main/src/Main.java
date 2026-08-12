@@ -3451,6 +3451,14 @@ public static void ascSort(int[] num){
         System.out.print(el);
     }
 }
+// devide the integer------------------>
+public int div(int dividend, int divisor) {
+    if(dividend==Integer.MIN_VALUE && divisor==-1){
+        return Integer.MAX_VALUE;
+    }else{
+        return  dividend/divisor;
+    }
+}
 public static void main (String args[]) {
     removeExtraSpace("name   is   shivas   singh  he is not goog");
 }
