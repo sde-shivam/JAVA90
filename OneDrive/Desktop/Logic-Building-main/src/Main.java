@@ -3487,6 +3487,19 @@ public static void remVowels(String str) {
     }
     System.out.println(newStr);
 }
+// Print pairs--------------->
+public static void priPairs(int numbers[]) {
+    int tp = 0;
+    for (int i = 0; i < numbers.length; i++) {
+        int curr = numbers[i];//2,4,6,8,10
+        for (int j = i + 1; j < numbers.length; j++) {
+            System.out.print("(" + curr + "," + numbers[j] + ")");
+            tp++;
+        }
+        System.out.println();
+    }
+    System.out.print("Number of pairs = " + tp);
+}
 public static void main (String args[]) {
     removeExtraSpace("name   is   shivas   singh  he is not goog");
 }
