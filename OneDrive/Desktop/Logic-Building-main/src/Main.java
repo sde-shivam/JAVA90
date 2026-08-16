@@ -3487,7 +3487,7 @@ public static void remVowels(String str) {
     }
     System.out.println(newStr);
 }
-// Print pairs--------------->
+//                                                                                                        n mnbvbnm,nb  --------------->
 public static void priPairs(int numbers[]) {
     int tp = 0;
     for (int i = 0; i < numbers.length; i++) {
@@ -3499,6 +3499,16 @@ public static void priPairs(int numbers[]) {
         System.out.println();
     }
     System.out.print("Number of pairs = " + tp);
+}
+//Smallest Element in Array---------------->
+public static int getSmallestEl(int numbers[]) {
+    int smallest = Integer.MAX_VALUE; //----------For +infinity
+    for (int i = 0; i < numbers.length; i++) {
+        if (smallest > numbers[i]) {
+            smallest = numbers[i];
+        }
+    }
+    return smallest;
 }
 public static void main (String args[]) {
     removeExtraSpace("name   is   shivas   singh  he is not goog");
