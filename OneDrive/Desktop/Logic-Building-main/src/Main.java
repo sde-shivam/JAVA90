@@ -3487,7 +3487,7 @@ public static void remVowels(String str) {
     }
     System.out.println(newStr);
 }
-//                                                                                                        n mnbvbnm,nb  --------------->
+//  pairs number--------------->
 public static void priPairs(int numbers[]) {
     int tp = 0;
     for (int i = 0; i < numbers.length; i++) {
@@ -3509,6 +3509,21 @@ public static int getSmallestEl(int numbers[]) {
         }
     }
     return smallest;
+}
+//String operations--------------------------------->
+public static void oprStr(String str){
+    System.out.println("Length of String : "+str.length());
+    System.out.println("First Char: "+str.charAt(0)+","+" Last Char :"+str.charAt(str.length()-1));
+    System.out.println("Uppercase : "+str.toUpperCase());
+    System.out.println("Lowercase : "+str.toLowerCase());
+    int count = 0;
+    for(int i=0;i<str.length();i++){
+        char ch = str.charAt(i);
+        if(Character.isLetter(ch)){
+            count++;
+        }
+    }
+    System.out.println("Count of char in String: "+count);
 }
 public static void main (String args[]) {
     removeExtraSpace("name   is   shivas   singh  he is not goog");
