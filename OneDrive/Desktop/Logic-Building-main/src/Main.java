@@ -3525,6 +3525,10 @@ public static void oprStr(String str){
     }
     System.out.println("Count of char in String: "+count);
 }
+// Concat 2 strings------------------------->
+public static void concatString(String str1,String str2){
+    System.out.print("Concated String--->"+str1.concat(str2));
+}
 public static void main (String args[]) {
     removeExtraSpace("name   is   shivas   singh  he is not goog");
 }
