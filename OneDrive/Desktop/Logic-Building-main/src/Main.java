@@ -3529,6 +3529,16 @@ public static void oprStr(String str){
 public static void concatString(String str1,String str2){
     System.out.print("Concated String--->"+str1.concat(str2));
 }
+//Create new array with squre of each element ------------->
+public static void squreArray(int[] num){
+    int[] squre = new int[num.length];
+    for(int i=0;i<num.length;i++){
+        squre[i] = num[i] * num[i];
+    }
+    for(int squres : squre){
+        System.out.print(squres+",");
+    }
+}
 public static void main (String args[]) {
     removeExtraSpace("name   is   shivas   singh  he is not goog");
 }
