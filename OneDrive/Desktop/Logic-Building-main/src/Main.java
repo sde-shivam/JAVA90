@@ -3539,6 +3539,16 @@ public static void squreArray(int[] num){
         System.out.print(squres+",");
     }
 }
+//Largest Element in Array---------------->
+public static int getLargestNum(int numbers[]) {
+    int largest = Integer.MIN_VALUE; //----------For -infinity
+    for (int i = 0; i < numbers.length; i++) {
+        if (largest < numbers[i]) {
+            largest = numbers[i];
+        }
+    }
+    return largest;
+}
 public static void main (String args[]) {
     removeExtraSpace("name   is   shivas   singh  he is not goog");
 }
