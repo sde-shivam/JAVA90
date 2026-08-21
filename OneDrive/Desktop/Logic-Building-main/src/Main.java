@@ -3549,6 +3549,18 @@ public static int getLargestNum(int numbers[]) {
     }
     return largest;
 }
+// Elements which are in first but not in second------------------>
+public static void noCommonElInArr(int[] arr1,int[] arr2){
+    Set<Integer> set = new HashSet<>();
+    for(int el2:arr2){
+        set.add(el2);
+    }
+    for(int el1:arr1) {
+        if (!set.contains(el1)) {
+            System.out.print(el1 + ",");
+        }
+    }
+}
 public static void main (String args[]) {
     removeExtraSpace("name   is   shivas   singh  he is not goog");
 }
