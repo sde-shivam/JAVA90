@@ -3575,6 +3575,20 @@ public static void commonElInArray(int[] arr1,int[] arr2){
         System.out.print(el + ",");
     }
 }
+// Remove Duplicate character from string-------------------->
+public static String remDuplicate(String str) {
+    Set<Character> newSet = new LinkedHashSet<>();
+    for(char ch : str.toCharArray()){
+        if (Character.isLetter(ch)) {
+            newSet.add(ch);
+        }
+    }
+    StringBuilder sb = new StringBuilder();
+    for(char ch : newSet){
+        sb.append(ch);
+    }
+    return sb.toString();
+}
 public static void main (String args[]) {
     removeExtraSpace("name   is   shivas   singh  he is not goog");
 }
