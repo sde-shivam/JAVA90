@@ -3589,6 +3589,18 @@ public static String remDuplicate(String str) {
     }
     return sb.toString();
 }
+//count the element in an array which is divisible by 3 and 5 both----------------->
+public static void divNum(int[] num){
+    int count = 0;
+    for(int i=0;i<num.length;i++){
+        if(num[i] % 15 ==0){
+            System.out.print(num[i]+",");
+            count++;
+        }
+    }
+    System.out.println();
+    System.out.print("Count :"+count);
+}
 public static void main (String args[]) {
     removeExtraSpace("name   is   shivas   singh  he is not goog");
 }
