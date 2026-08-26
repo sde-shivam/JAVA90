@@ -3601,6 +3601,22 @@ public static void divNum(int[] num){
     System.out.println();
     System.out.print("Count :"+count);
 }
+//Majority element in array (Brute force)------->
+public static int majorityElementInArr(int num[]) {
+    int n = num.length;
+    for (int i = 0; i < n; i++) {
+        int count = 0;
+        for (int j = 0; j < n; j++) {
+            if (num[i] == num[j]) {
+                count++;
+            }
+        }
+        if (count > n / 2) {
+            return num[i];
+        }
+    }
+    return -1;
+}
 public static void main (String args[]) {
     removeExtraSpace("name   is   shivas   singh  he is not goog");
 }
