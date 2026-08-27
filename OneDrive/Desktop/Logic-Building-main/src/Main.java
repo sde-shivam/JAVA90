@@ -3617,6 +3617,14 @@ public static int majorityElementInArr(int num[]) {
     }
     return -1;
 }
+//Reverse a number recursively------------------>
+public static int revNumber(int num,int rev){
+    if(num==0) return rev;
+    int lastDigit = num % 10;
+    rev = rev * 10 + lastDigit;
+    num = num/10;
+    return reverseNumber(num,rev);
+}
 public static void main (String args[]) {
     removeExtraSpace("name   is   shivas   singh  he is not goog");
 }
